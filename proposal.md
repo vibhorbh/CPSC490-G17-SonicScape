@@ -70,6 +70,7 @@ Date: 〈YYYY-MM-DD〉
 > describes what makes your proposal different from existing ones.
 
 〈Your introduction.〉
+Our Team has decided to build Project SonicScape, we intend for this program to pull and parse information from Nasa's official website utilizing the free API keys that Nasa has to offer. Once we are able to build the API parser and pull information we plan to utilize mapping of solar systems to create a music app that allows the user to traverse galaxies/star systems which will be interpreted as different music genres and artists. As the user begins traversing they will be able to swipe right or left on the given artist/genre to confirm or deny their fondness of the music. We plan to incorporate some level of AI to begin learning the users music taste to help the user find new music similar to what they already like. Our proposal hopes to target the problem of large corporations inbuilt AI models such as "DJ X" from Spotify, any user of the Spotify app can attest to the poor quality of the DJ's suggestions Project SonicScape intends to address this problem by showing the user music that is both new to them and still in the same genre they currently enjoy.  
 
 ### 1.1 Related Work
 
@@ -286,6 +287,8 @@ the system actually get built next semester?"〉
 
 〈Your disclosure. Naming the tool is not disclosure — name what it drafted,
 what fraction of each artifact was AI-assisted, and how you verified it.〉
+
+Our Team aims to write the API parser on our own as this is a relatively simple process, during the design process I am sure that we will address AI chat bots such as Claude to help with any questions on libraries/functions we have. The main role that AI will play in our project is taking in data from the user about what music they like and dislike to help build a catalogue of new music that they may find intriguing. The Team also hopes to build a graphical UI so that the program is as immersive and enjoyable as possible for the end user so we may end up getting a chatbot to help build a smooth and attractive interface, however while still in the prototype phase we may leave program as terminal based. 
 
 ## 8. References
 
