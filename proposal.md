@@ -3,8 +3,8 @@
 **Department of Computer Science**
 **CPSC 490 Undergraduate Seminar in Computer Science — Proposal for Capstone Project**
 
-**Group 〈N〉 — 〈Group Name〉** · Sponsor: 〈RTX-3 / EL-1 / SNX-n / independent〉
-Authors: 〈Last, First (GitHub username)〉, 〈…〉
+**Group 17 — SonicScape ** · Sponsor: independent
+Authors: 〈Bhargava, Vibhor, vibhorbh〉,〈…Deboer Bradley, braddeboer> 〉,〈…Kaur Jaspreet, jaspreek9k〉〈…Alrubai Hassan, 〉
 Date: 〈YYYY-MM-DD〉
 
 > **This file is the proposal document, not a README.** Its section numbers,
@@ -57,6 +57,7 @@ Date: 〈YYYY-MM-DD〉
 > one-page limit must be shortened.
 
 〈Your abstract. Write it last.〉
+Our goal as a team was to make a music app but after doing a little bit of market research, we found that most music apps have the same features i.e., liking songs, adding songs to playlists, searching up features and paying a premium to get no ads, the UI is plain and old and even regular app updates don't bring much changes so we felt the need to make the user experience more interesting by using planets and subsystems as our base idea. In our project, we want to build a new style of music app where the users will be able to listen to music in a new way that hasn't been explored much, as planets and star systems, you will be able to click into planets and star systems to switch genres and play around with playlists and songs instead of using those same old boring flat interfaces every other music app gives you. We want to give users the feeling that using the "premium" music apps shouldn't be industry standard that everyone has to use, we want music apps to become more experimental and playful even. 
 
 ## 1. Introduction
 
