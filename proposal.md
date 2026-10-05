@@ -58,6 +58,7 @@ Date: 〈YYYY-MM-DD〉
 
 〈Your abstract. Write it last.〉
 Our goal as a team was to make a music app but after doing a little bit of market research, we found that most music apps have the same features i.e., liking songs, adding songs to playlists, searching up features and paying a premium to get no ads, the UI is plain and old and even regular app updates don't bring much changes so we felt the need to make the user experience more interesting by using planets and subsystems as our base idea. In our project, we want to build a new style of music app where the users will be able to listen to music in a new way that hasn't been explored much, as planets and star systems, you will be able to click into planets and star systems to switch genres and play around with playlists and songs instead of using those same old boring flat interfaces every other music app gives you. We want to give users the feeling that using the "premium" music apps shouldn't be industry standard that everyone has to use, we want music apps to become more experimental and playful even. 
+For SonicScape, we want the app to feel more like exploring than just scrolling through another music platform. Instead of only giving users playlists or random recommendations, the app will let them move through different planets and star systems that represent genres, artists, and songs. As users like, dislike, or skip music, the app can slowly learn what they enjoy and use that to improve future recommendations. The main goal is to make discovering music feel more fun, personal, and interactive, while still keeping the basic features people expect from a music app.
 
 ## 1. Introduction
 
@@ -87,16 +88,20 @@ them against each other on the dimensions that matter for your project, with
 honest pros and cons. Then say plainly what your project does differently and
 why that difference is worth the effort.
 
-| Existing approach | What it does | Pros | Cons | Why ours differs |
+| Existing approach          | What it does                  | Pros                | Cons           | Why ours differs |
 |---|---|---|---|---|
-| 〈product / paper [1]〉 | 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 |
-| 〈product / paper [2]〉 | 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 |
-| 〈product / paper [3]〉 | 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 |
-
+| 〈product / paper [1]〉     | 〈…〉                          | 〈…〉              | 〈…〉          | 〈…〉 |
+| 〈Pandora [2]〉             | 〈reccommends music based on   |detailed song based|uses traditional| Our product combines feedback with an explorative experience.
+                              user feedback             〉     |recommendations    | interface      |
+| 〈Interactive 
+Music Genre Exploration 〉[3] |uses visualization and mod control|gives users more |focuses on mood         |{gives a space-based experience coupled with attention to user feedback }           |
+                              |to suggest music genres           |control over     |rather than
+                                                                  exploration      | a complete experience.
 〈Discuss the table in prose — the table is evidence, the paragraph is the
 argument. "Nothing like this exists" is almost never true and reads as a
 missing survey; if a close competitor exists, say so and explain why you are
 still building this.〉
+* have to write about the surveys based on the table
 
 ### 1.2 Problem Statements
 
