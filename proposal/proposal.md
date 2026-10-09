@@ -15,17 +15,13 @@ For SonicScape, we want the app to feel more like exploring than just scrolling 
 ## 1. Introduction
 Our Team has decided to build Project SonicScape, we intend for this program to pull and parse information from Nasa's official website utilizing the free API keys that Nasa has to offer as well as potentially utilizing databases of music to organize a users preference on our own backend rather than relying fully on an llm. Once we are able to build the API parser and pull information we plan to utilize mapping of solar systems to create a music app that allows the user to traverse galaxies/star systems which will be interpreted as different music genres and artists. As the user begins traversing they will be able to swipe right or left on the given artist/genre to confirm or deny their fondness of the music. The current plan is to have Galaxies represent music Genres, Star Systems represent Artists, and individual planets representing songs from the Artists. We plan to incorporate some level of AI to begin creating a custom profile of the individual users music taste to help them find new music similar to what they already like. Our Project hopes to solve the problem of large corporations inbuilt AI models such as "DJ X" from Spotify. As a user of both Spotify and its DJ X for years now our team can personally attest to the lack luster nature of this AI DJ, often when you select the DJ they play music that you already are listening to, claim to get ready to play music that will quote "pump you up" just to play soft indie music, and just generally suggest poor music related to what you actually listen to.
 
-
+### 1.1 Related Work
 | Existing approach | What it does | Pros | Cons | Why ours differs |
 |---|---|---|---|---|
 | 〈Spotify〉 | 〈recommends music based on what users listen to〉 | 〈easy to use, good playlist, personalized suggestions〉 | 〈Music discovery is mostly through playlist and search〉 | 〈Ecosphere makes discovering music more interactive by letting users explore the space theme world rather then boring screens〉 |
 | 〈Apple Music〉 | 〈Suggests songs, artists, playlists based on your preferences〉 | 〈Good recommendation and large music library〉 | 〈Using a traditional browsing experience〉 | 〈It focuses on exploration and visual interaction instead of standard menus〉 |
 | 〈YouTube Music〉 | 〈Recommends music using listening and viewing history〉 | 〈Large variety of music and personalized suggestions〉 | 〈Recommendations can become repetitiv〉 | 〈It encourages users to actively discover new music through exploration〉 |
 
-〈Discuss the table in prose — the table is evidence, the paragraph is the
-argument. "Nothing like this exists" is almost never true and reads as a
-missing survey; if a close competitor exists, say so and explain why you are
-still building this.〉
 
 ### 1.2 Problem Statements
 
