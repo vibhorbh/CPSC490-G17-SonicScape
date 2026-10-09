@@ -87,9 +87,9 @@ why that difference is worth the effort.
 
 | Existing approach | What it does | Pros | Cons | Why ours differs |
 |---|---|---|---|---|
-| 〈product / paper [1]〉 | 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 |
-| 〈product / paper [2]〉 | 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 |
-| 〈product / paper [3]〉 | 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 |
+| 〈Spotify〉 | 〈recommends music based on what users listen to〉 | 〈easy to use, good playlist, personalized suggestions〉 | 〈Music discovery is mostly through playlist and search〉 | 〈Ecosphere makes discovering music more interactive by letting users explore the space theme world rather then boring screens〉 |
+| 〈Apple Music〉 | 〈Suggests songs, artists, playlists based on your preferences〉 | 〈Good recommendation and large music library〉 | 〈Using a traditional browsing experience〉 | 〈It focuses on exploration and visual interaction instead of standard menus〉 |
+| 〈YouTube Music〉 | 〈Recommends music using listening and viewing history〉 | 〈Large variety of music and personalized suggestions〉 | 〈Recommendations can become repetitiv〉 | 〈It encourages users to actively discover new music through exploration〉 |
 
 〈Discuss the table in prose — the table is evidence, the paragraph is the
 argument. "Nothing like this exists" is almost never true and reads as a
@@ -100,9 +100,7 @@ still building this.〉
 
 > Briefly state the problem to solve in this project.
 
-〈Your problem statement(s), **concise** — a few sentences each, no
-background (that was §1) and no solution (that is §3). Number them P1, P2, …
-so later sections can refer back.〉
+〈Many music streaming platforms focus on efficiency rather than exploration, causing users to quickly settle into familiar listening habits. As a result, users may miss opportunities to discover new artist, genres and songs outside normal preferences. Our project use a space themed environment to encourage curiosity and activity exploration. By representing genres, and songs as planets and star systems, users are motivated to explore unfamiliar content in a engaging and memorable way〉
 
 **Every problem here must connect to the goals and objectives in §2, and
 every goal in §2 must trace back to a problem here.** A goal with no problem
@@ -112,8 +110,9 @@ is what the final project report is graded against.
 
 | Problem | Addressed by |
 |---|---|
-| P1 〈one line〉 | 〈Goal 1 (#n)〉 |
-| P2 〈one line〉 | 〈Goal 2 (#n)〉 |
+| P1 〈Music discovery can feel repetitive and non-engaging in traditional music apps〉 | 〈Goal 1 (#n)〉 |
+| P2 〈Users may have difficulty finding new artists, songs, genres that match their interests〉 | 〈Goal 2 (#n)〉 |
+| P3 〈Existing music apps provide limited interactive exploration features〉 | 〈Goal 3 (#n)〉 |
 
 ## 2. Goals and Objectives
 
