@@ -56,14 +56,13 @@ apart.
 Write each objective the way the guidance above asks — **an action word plus
 the measure that says it is done**, not a role-play sentence:
 
-- **Goal 1: 〈e.g. Secure account management〉** (Epic #〈n〉)
-  - Objective 1.1: 〈Implement member registration and login with hashed
-    credentials, session expiry, and rejection of malformed input.〉 (#〈n〉)
-  - Objective 1.2: 〈Demonstrate the login round-trip in a runnable prototype
-    at the Week-8 in-class check.〉 (#〈n〉)
-- **Goal 2: 〈your second goal〉** (Epic #〈n〉)
-  - Objective 2.1: 〈Action word + what you will complete + how it will be
-    measured〉 (#〈n〉)
+- **Goal 1: 〈Write Nasa API Parser〉** (Epic #〈1〉)
+  - Objective 1.1: 〈Create Nasa class that will hold all Nasa API request functions〉 (#〈1〉)
+  - Objective 1.2: 〈Create and send SQL query request to "https://exoplanetarchive.ipac.caltech.edu/TAP/sync"〉 (#〈2〉)
+  - Objective 1.3: 〈Organize API response into a custom dictionary formatted .json〉 (#〈3〉)
+- **Goal 2: 〈Write Music Database API Parser〉** (Epic #〈2〉)
+  - Objective 2.1: 〈Create Music class that will hold all "https://ws.audioscrobbler.com/2.0/" API request functions〉 (#〈1〉)
+  - Objective 2.2: 〈Impliment functions to generate json files for each respecitve category〉 (#〈2〉)
 
 〈Replace the brackets with your own 2–3 goals and their objectives, and put
 the **real issue numbers** in as you file them — gate G8 checks that every
