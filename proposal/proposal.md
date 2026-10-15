@@ -140,20 +140,13 @@ apart.
 Write each objective the way the guidance above asks — **an action word plus
 the measure that says it is done**, not a role-play sentence:
 
-- **Goal 1: 〈e.g. Secure account management〉** (Epic #〈n〉)
-  - Objective 1.1: 〈Implement member registration and login with hashed
-    credentials, session expiry, and rejection of malformed input.〉 (#〈n〉)
-  - Objective 1.2: 〈Demonstrate the login round-trip in a runnable prototype
-    at the Week-8 in-class check.〉 (#〈n〉)
-- **Goal 2: 〈your second goal〉** (Epic #〈n〉)
-  - Objective 2.1: 〈Action word + what you will complete + how it will be
-    measured〉 (#〈n〉)
+- **Goal 1: Let the user explore music in an engaging interface ** (Epic #1)
+  - Objective 1.1: Impliment a API parser for  "https://exoplanetarchive.ipac.caltech.edu/TAP/sync" (#1)
+  - Objective 1.2: Use the parsed information to generate a UI that allows the user to explore music in a solar system lay out (#2)
+- **Goal 2: Implore users to find new artists and music ** (Epic #2)
+  - Objective 2.1: Create Music class that will hold all "https://ws.audioscrobbler.com/2.0/" API request functions to gather Genre/Artist/Music data (#3)
+  - Objective 2.2: Link an outside llm to gather and learn the users music taste based off of previous information given (#4)
 
-〈Replace the brackets with your own 2–3 goals and their objectives, and put
-the **real issue numbers** in as you file them — gate G8 checks that every
-epic and story in your repository is linked from this section. A fully worked
-version of this, with live issues and a populated board, is in the course
-example repository.〉
 
 ## 3. Proposed Approaches
 
