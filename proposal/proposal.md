@@ -1,144 +1,37 @@
-# Project Proposal — 〈Project Title〉
+# Project Proposal — Echo Sphere
 
 **Department of Computer Science**
 **CPSC 490 Undergraduate Seminar in Computer Science — Proposal for Capstone Project**
 
-**Group 〈N〉 — 〈Group Name〉** · Sponsor: 〈RTX-3 / EL-1 / SNX-n / independent〉
-Authors: 〈Last, First (GitHub username)〉, 〈…〉
+**Group 17 — SonicScape ** · Sponsor: independent
+Authors: 〈Bhargava, Vibhor, vibhorbh〉,〈…Deboer Bradley, braddeboer> 〉,〈…Kaur Jaspreet, jaspreek9k〉〈…Alrubai Hassan, 〉
 Date: 〈YYYY-MM-DD〉
 
-> **This file is the proposal document, not a README.** Its section numbers,
-> titles, and guidance are copied from the course Word template, so it
-> converts cleanly for Canvas submission. Write continuous academic prose —
-> no task lists, no emoji, no repo jargon.
->
-> Each section below opens with the template's own guidance in a quote block.
-> **Delete the quote blocks and every 〈bracket〉 before submitting.**
->
-> **Getting this into the Word template for Canvas.** The template numbers
-> its headings **automatically** (a multilevel list: top-level sections at
-> level 1, *Related Work* and *Problem Statements* at level 2). The numbers
-> typed below exist so the repo copy is readable and checkable — so when you
-> move the text into Word, do not end up with both sets.
->
-> The reliable route, and the one most teams should use: **open the course
-> template and paste your prose section by section**, leaving Word's own
-> numbering to do the numbering. Ten minutes, no surprises.
->
-> If you prefer to convert, `pandoc` can do it (install with
-> `winget install pandoc`):
->
->     pandoc proposal/proposal.md -o proposal.docx --reference-doc="CPSC 490 Project Proposal Template Fall 2026.docx"
->
-> Then in Word: delete the typed `0.` / `1.` / `1.1` prefixes (Word re-adds
-> them from the list), and set *Related Work* and *Problem Statements* to the
-> template's level-2 heading so they number as 1.1 and 1.2. Check figure
-> placement, then submit.
->
-> Either way, keep this Markdown copy current — it is what peer review and CI
-> can actually read. If your team writes in Word instead, commit the `.docx`
-> here as well.
-
----
-
 ## 0. Abstract
+Our goal as a team was to make a music app but after doing a little bit of market research, we found that most music apps have the same features i.e., liking songs, adding songs to playlists, searching up features and paying a premium to get no ads, the UI is plain and old and even regular app updates don't bring much changes so we felt the need to make the user experience more interesting by using planets and subsystems as our base idea. In our project, we want to build a new style of music app where the users will be able to listen to music in a new way that hasn't been explored much, as planets and star systems, you will be able to click into planets and star systems to switch genres and play around with playlists and songs instead of using those same old boring flat interfaces every other music app gives you. We want to give users the feeling that using the "premium" music apps shouldn't be industry standard that everyone has to use, we want music apps to become more experimental and playful even. 
 
-> The primary purpose of abstract is to help the reader understand the main
-> message of current document (proposal in this case) without reading the
-> entire document. Therefore an abstract should include at least one or two
-> paragraph of background (or motivation) information for the project, a
-> brief description of the problem you are trying to solve in this proposal,
-> a proposed ideas or solutions, the significance of your proposed idea
-> elaborating why the proposed idea is non-trivial, significant, or
-> beneficial in one or two paragraphs, the project goals and outcomes in one
-> paragraph, and a brief description of what you will discuss in this
-> proposal, giving a brief outline of this document in 1-2 sentences in one
-> paragraph. Abstract should not exceed one page. Any abstract exceeded
-> one-page limit must be shortened.
-
-〈Your abstract. Write it last.〉
+For SonicScape, we want the app to feel more like exploring than just scrolling through another music platform. Instead of only giving users playlists or random recommendations, the app will let them move through different planets and star systems that represent genres, artists, and songs. As users like, dislike, or skip music, the app can slowly learn what they enjoy and use that to improve future recommendations. The main goal is to make discovering music feel more fun, personal, and interactive, while still keeping the basic features people expect from a music app.
 
 ## 1. Introduction
-
-> Describe the necessary background on the project field to help the reader
-> understand the field. Assume the reader has B.S. degree in computer science
-> but not necessary knowledgeable in the selected area. You may also briefly
-> describe motivation of the project if any.
->
-> Specify the problem identified and to be solved in this project, the
-> importance or usefulness of the problem solving or project. Further
-> describes what makes your proposal different from existing ones.
-
-〈Your introduction.〉
+Our Team has decided to build Project SonicScape, we intend for this program to pull and parse information from Nasa's official website utilizing the free API keys that Nasa has to offer as well as potentially utilizing databases of music to organize a users preference on our own backend rather than relying fully on an llm. Once we are able to build the API parser and pull information we plan to utilize mapping of solar systems to create a music app that allows the user to traverse galaxies/star systems which will be interpreted as different music genres and artists. As the user begins traversing they will be able to swipe right or left on the given artist/genre to confirm or deny their fondness of the music. The current plan is to have Galaxies represent music Genres, Star Systems represent Artists, and individual planets representing songs from the Artists. We plan to incorporate some level of AI to begin creating a custom profile of the individual users music taste to help them find new music similar to what they already like. Our Project hopes to solve the problem of large corporations inbuilt AI models such as "DJ X" from Spotify. As a user of both Spotify and its DJ X for years now our team can personally attest to the lack luster nature of this AI DJ, often when you select the DJ they play music that you already are listening to, claim to get ready to play music that will quote "pump you up" just to play soft indie music, and just generally suggest poor music related to what you actually listen to.
 
 ### 1.1 Related Work
-
-> Describe the related or existing work in detail. This section is like a
-> survey on the selected problem or topic.
-
-〈Your survey. Cite with bracketed numbers matching §8 — every reference must
-be a source your team has actually read.〉
-
-**Do a comparative analysis, not a list of summaries.** Find the existing
-ideas, products, papers, or tools that attack the same problem and compare
-them against each other on the dimensions that matter for your project, with
-honest pros and cons. Then say plainly what your project does differently and
-why that difference is worth the effort.
-
 | Existing approach | What it does | Pros | Cons | Why ours differs |
 |---|---|---|---|---|
-| 〈product / paper [1]〉 | 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 |
-| 〈product / paper [2]〉 | 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 |
-| 〈product / paper [3]〉 | 〈…〉 | 〈…〉 | 〈…〉 | 〈…〉 |
+| 〈Spotify〉 | 〈recommends music based on what users listen to〉 | 〈easy to use, good playlist, personalized suggestions〉 | 〈Music discovery is mostly through playlist and search〉 | 〈Ecosphere makes discovering music more interactive by letting users explore the space theme world rather then boring screens〉 |
+| 〈Apple Music〉 | 〈Suggests songs, artists, playlists based on your preferences〉 | 〈Good recommendation and large music library〉 | 〈Using a traditional browsing experience〉 | 〈It focuses on exploration and visual interaction instead of standard menus〉 |
+| 〈YouTube Music〉 | 〈Recommends music using listening and viewing history〉 | 〈Large variety of music and personalized suggestions〉 | 〈Recommendations can become repetitiv〉 | 〈It encourages users to actively discover new music through exploration〉 |
 
-〈Discuss the table in prose — the table is evidence, the paragraph is the
-argument. "Nothing like this exists" is almost never true and reads as a
-missing survey; if a close competitor exists, say so and explain why you are
-still building this.〉
 
 ### 1.2 Problem Statements
 
-> Briefly state the problem to solve in this project.
-
-〈Your problem statement(s), **concise** — a few sentences each, no
-background (that was §1) and no solution (that is §3). Number them P1, P2, …
-so later sections can refer back.〉
-
-**Every problem here must connect to the goals and objectives in §2, and
-every goal in §2 must trace back to a problem here.** A goal with no problem
-behind it is scope you invented; a problem with no goal is a problem you are
-not actually solving. Check both directions before you submit — this mapping
-is what the final project report is graded against.
-
 | Problem | Addressed by |
 |---|---|
-| P1 〈one line〉 | 〈Goal 1 (#n)〉 |
-| P2 〈one line〉 | 〈Goal 2 (#n)〉 |
+| P1 〈Music discovery can feel repetitive and non-engaging in traditional music apps〉 | 〈Goal 1 (#n)〉 |
+| P2 〈Users may have difficulty finding new artists, songs, genres that match their interests〉 | 〈Goal 2 (#n)〉 |
+| P3 〈Existing music apps provide limited interactive exploration features〉 | 〈Goal 3 (#n)〉 |
 
 ## 2. Goals and Objectives
-
-> Describe goals and objectives. Goals are general statements of what you are
-> trying to accomplish with the project or problems to solve. Objectives are
-> specific, measurable statements of what you want to complete to reach the
-> project goals. Most projects have 2-3 goals.
->
-> List the objectives for each goal. To write objectives, look at the goal
-> statement and list what you need to complete using action words like use
-> case names in order to meet the goal.
->
-> Note that the goals and objectives in a proposal will be an important
-> metric to evaluate whether or not you successfully finished your project
-> when you turn in your final project report.
-
-Each **goal** is tracked as an **Epic** issue and each **objective** as a
-**User Story** issue in the team repository (see the setup guide's *Epics and user stories* section).
-**Every epic and user story in the repository is linked from this section** —
-CI gate G8 fails if one exists that this section does not link. That is what
-keeps the goals in this document and the work on the board from drifting
-apart.
-
-Write each objective the way the guidance above asks — **an action word plus
-the measure that says it is done**, not a role-play sentence:
 
 - **Goal 1: Let the user explore music in an engaging interface ** (Epic #1)
   - Objective 1.1: Impliment a API parser for  "https://exoplanetarchive.ipac.caltech.edu/TAP/sync" (#1)
