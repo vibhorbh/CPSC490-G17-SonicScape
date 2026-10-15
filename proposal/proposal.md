@@ -33,42 +33,13 @@ Our Team has decided to build Project SonicScape, we intend for this program to 
 
 ## 2. Goals and Objectives
 
-> Describe goals and objectives. Goals are general statements of what you are
-> trying to accomplish with the project or problems to solve. Objectives are
-> specific, measurable statements of what you want to complete to reach the
-> project goals. Most projects have 2-3 goals.
->
-> List the objectives for each goal. To write objectives, look at the goal
-> statement and list what you need to complete using action words like use
-> case names in order to meet the goal.
->
-> Note that the goals and objectives in a proposal will be an important
-> metric to evaluate whether or not you successfully finished your project
-> when you turn in your final project report.
+- **Goal 1: Let the user explore music in an engaging interface ** (Epic #1)
+  - Objective 1.1: Impliment a API parser for  "https://exoplanetarchive.ipac.caltech.edu/TAP/sync" (#1)
+  - Objective 1.2: Use the parsed information to generate a UI that allows the user to explore music in a solar system lay out (#2)
+- **Goal 2: Implore users to find new artists and music ** (Epic #2)
+  - Objective 2.1: Create Music class that will hold all "https://ws.audioscrobbler.com/2.0/" API request functions to gather Genre/Artist/Music data (#3)
+  - Objective 2.2: Link an outside llm to gather and learn the users music taste based off of previous information given (#4)
 
-Each **goal** is tracked as an **Epic** issue and each **objective** as a
-**User Story** issue in the team repository (see the setup guide's *Epics and user stories* section).
-**Every epic and user story in the repository is linked from this section** —
-CI gate G8 fails if one exists that this section does not link. That is what
-keeps the goals in this document and the work on the board from drifting
-apart.
-
-Write each objective the way the guidance above asks — **an action word plus
-the measure that says it is done**, not a role-play sentence:
-
-- **Goal 1: 〈Write Nasa API Parser〉** (Epic #〈1〉)
-  - Objective 1.1: 〈Create Nasa class that will hold all Nasa API request functions〉 (#〈1〉)
-  - Objective 1.2: 〈Create and send SQL query request to "https://exoplanetarchive.ipac.caltech.edu/TAP/sync"〉 (#〈2〉)
-  - Objective 1.3: 〈Organize API response into a custom dictionary formatted .json〉 (#〈3〉)
-- **Goal 2: 〈Write Music Database API Parser〉** (Epic #〈2〉)
-  - Objective 2.1: 〈Create Music class that will hold all "https://ws.audioscrobbler.com/2.0/" API request functions〉 (#〈1〉)
-  - Objective 2.2: 〈Impliment functions to generate json files for each respecitve category〉 (#〈2〉)
-
-〈Replace the brackets with your own 2–3 goals and their objectives, and put
-the **real issue numbers** in as you file them — gate G8 checks that every
-epic and story in your repository is linked from this section. A fully worked
-version of this, with live issues and a populated board, is in the course
-example repository.〉
 
 ## 3. Proposed Approaches
 
