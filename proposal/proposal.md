@@ -3,8 +3,8 @@
 **Department of Computer Science**
 **CPSC 490 Undergraduate Seminar in Computer Science — Proposal for Capstone Project**
 
-**Group 17 — SonicScape ** · Sponsor: independent
-Authors: 〈Bhargava, Vibhor, vibhorbh〉,〈…Deboer Bradley, braddeboer> 〉,〈…Kaur Jaspreet, jaspreek9k〉〈…Alrubai Hassan, 〉
+**Group 17 — SonicScape ** · Sponsor: Independent
+Authors: Bhargava, Vibhor (vibhorbh), Deboer Bradley (braddeboer), Kaur Jaspreet (jaspreek9k), Alrubai Hassan (hassanalrubai02) 
 Date: 〈YYYY-MM-DD〉
 
 ## 0. Abstract
@@ -18,27 +18,30 @@ Our Team has decided to build Project SonicScape, we intend for this program to 
 ### 1.1 Related Work
 | Existing approach | What it does | Pros | Cons | Why ours differs |
 |---|---|---|---|---|
-| 〈Spotify〉 | 〈recommends music based on what users listen to〉 | 〈easy to use, good playlist, personalized suggestions〉 | 〈Music discovery is mostly through playlist and search〉 | 〈Ecosphere makes discovering music more interactive by letting users explore the space theme world rather then boring screens〉 |
-| 〈Apple Music〉 | 〈Suggests songs, artists, playlists based on your preferences〉 | 〈Good recommendation and large music library〉 | 〈Using a traditional browsing experience〉 | 〈It focuses on exploration and visual interaction instead of standard menus〉 |
-| 〈YouTube Music〉 | 〈Recommends music using listening and viewing history〉 | 〈Large variety of music and personalized suggestions〉 | 〈Recommendations can become repetitiv〉 | 〈It encourages users to actively discover new music through exploration〉 |
+| Spotify | Recommends music based on what users listen to | Easy to use, good playlist, personalized suggestions | Music discovery is mostly through playlist and search | Ecosphere makes discovering music more interactive by letting users explore the space theme world rather then boring screens |
+| Apple Music | Suggests songs, artists, playlists based on your preferences | Good recommendation and large music library | Using a traditional browsing experience | It focuses on exploration and visual interaction instead of standard menus |
+| YouTube Music | Recommends music using listening and viewing history | Large variety of music and personalized suggestions | Recommendations can become repetitiv | It encourages users to actively discover new music through exploration |
 
 
 ### 1.2 Problem Statements
 
 | Problem | Addressed by |
 |---|---|
-| P1 〈Music discovery can feel repetitive and non-engaging in traditional music apps〉 | 〈Goal 1 (#n)〉 |
-| P2 〈Users may have difficulty finding new artists, songs, genres that match their interests〉 | 〈Goal 2 (#n)〉 |
-| P3 〈Existing music apps provide limited interactive exploration features〉 | 〈Goal 3 (#n)〉 |
+| P1 Music discovery can feel repetitive and non-engaging in traditional music apps | Goal 1 (#n) |
+| P2 Users may have difficulty finding new artists, songs, genres that match their interests | Goal 2 (#n) |
+| P3 Existing music apps provide limited interactive exploration features | Goal 3 (#n) |
 
 ## 2. Goals and Objectives
 
-- **Goal 1: Let the user explore music in an engaging interface ** (Epic #1)
-  - Objective 1.1: Impliment a API parser for  "https://exoplanetarchive.ipac.caltech.edu/TAP/sync" (#1)
-  - Objective 1.2: Use the parsed information to generate a UI that allows the user to explore music in a solar system lay out (#2)
-- **Goal 2: Implore users to find new artists and music ** (Epic #2)
-  - Objective 2.1: Create Music class that will hold all "https://ws.audioscrobbler.com/2.0/" API request functions to gather Genre/Artist/Music data (#3)
-  - Objective 2.2: Link an outside llm to gather and learn the users music taste based off of previous information given (#4)
+- **Goal 1: Account Creation/Sign In** (Epic #1)
+  - Objective 1.1: Create user login page that will allow the users to either login to an existing account or create a new one (#1)
+  - Objective 1.2: Store users account data in local database to ensure login capability (#2)
+- **Goal 2: Music Preference Page** (Epic #2)
+  - Objective 2.1: Upon first login take users to a Music Preference page populated with Genres and Artists to choose from (#3)
+  - Objective 2.2: Store selected preferences in a dataframe unique to the user (#4)
+- **Goal 3: Persistent Data** (Epic #3)
+  - Objective 3.1: On save store all relavent variables unique to the user in a .JSON file  (#5)
+  - Objective 3.2: On sign in repopulate user unique variables with data stored in the .JSON (#6)
 
 
 ## 3. Proposed Approaches
