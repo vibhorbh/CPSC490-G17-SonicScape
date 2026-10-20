@@ -27,9 +27,9 @@ Our Team has decided to build Project SonicScape, we intend for this program to 
 
 | Problem | Addressed by |
 |---|---|
-| P1 Music discovery can feel repetitive and non-engaging in traditional music apps | Goal 1 (#n) |
-| P2 Users may have difficulty finding new artists, songs, genres that match their interests | Goal 2 (#n) |
-| P3 Existing music apps provide limited interactive exploration features | Goal 3 (#n) |
+| P1 Users need a way to create an account and sign in to access their personalized music experience. | Goal 1 |
+| P2 Users need a way to select their preferred genres and artists so the application can understand their music interests. | Goal 2 |
+| P3 Users need their account information and music preferences to remain saved between sessions. | Goal 3 |
 
 ## 2. Goals and Objectives
 
