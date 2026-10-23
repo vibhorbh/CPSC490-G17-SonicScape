@@ -33,15 +33,17 @@ Our Team has decided to build Project SonicScape, we intend for this program to 
 
 ## 2. Goals and Objectives
 
-- **Goal 1: Account Creation/Sign In** (Epic #1)
-  - Objective 1.1: Create user login page that will allow the users to either login to an existing account or create a new one (#1)
-  - Objective 1.2: Store users account data in local database to ensure login capability (#2)
-- **Goal 2: Music Preference Page** (Epic #2)
-  - Objective 2.1: Upon first login take users to a Music Preference page populated with Genres and Artists to choose from (#3)
-  - Objective 2.2: Store selected preferences in a dataframe unique to the user (#4)
-- **Goal 3: Persistent Data** (Epic #3)
-  - Objective 3.1: On save store all relavent variables unique to the user in a .JSON file  (#5)
-  - Objective 3.2: On sign in repopulate user unique variables with data stored in the .JSON (#6)
+- **Goal 1: Account Creation/Sign In** (Epic #21)
+  - Objective 1.1: Create user login page that will allow the users to either login to an existing account or create a new one (#25)
+  - Objective 1.2: Store users account data in local database to ensure login capability (#26)
+- **Goal 2: Music Preference Page** (Epic #22)
+  - Objective 2.1: Upon first login take users to a Music Preference page populated with Genres and Artists to choose from (#27)
+  - Objective 2.2: Store selected preferences in a dataframe unique to the user (#28)
+- **Goal 3: Persistent Data** (Epic #23)
+  - Objective 3.1: On save store all relavent variables unique to the user in a .JSON file  (#29)
+  - Objective 3.2: On sign in repopulate user unique variables with data stored in the .JSON (#30)
+
+  
 
 
 ## 3. Proposed Approaches
