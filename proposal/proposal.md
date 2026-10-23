@@ -31,17 +31,21 @@ Our Team has decided to build Project SonicScape, we intend for this program to 
 | P2 Users need a way to select their preferred genres and artists so the application can understand their music interests. | Goal 2 |
 | P3 Users need their account information and music preferences to remain saved between sessions. | Goal 3 |
 
+
+
 ## 2. Goals and Objectives
 
-- **Goal 1: Account Creation/Sign In** (Epic #1)
-  - Objective 1.1: Create user login page that will allow the users to either login to an existing account or create a new one (#1)
-  - Objective 1.2: Store users account data in local database to ensure login capability (#2)
-- **Goal 2: Music Preference Page** (Epic #2)
-  - Objective 2.1: Upon first login take users to a Music Preference page populated with Genres and Artists to choose from (#3)
-  - Objective 2.2: Store selected preferences in a dataframe unique to the user (#4)
-- **Goal 3: Persistent Data** (Epic #3)
-  - Objective 3.1: On save store all relavent variables unique to the user in a .JSON file  (#5)
-  - Objective 3.2: On sign in repopulate user unique variables with data stored in the .JSON (#6)
+- **Goal 1: Account Creation/Sign In** [[epic:#21]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/21)
+  - Objective 1.1: Create user login page that will allow the users to either login to an existing account or create a new one [[story:#25]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/25)
+  - Objective 1.2: Store users account data in local database to ensure login capability [[story:#26]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/26)
+- **Goal 2: Music Preference Page** [[epic:#22]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/22)
+  - Objective 2.1: Upon first login take users to a Music Preference page populated with Genres and Artists to choose from [[story:#27]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/27)
+  - Objective 2.2: Store selected preferences in a dataframe unique to the user [[story:#28]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/28)
+- **Goal 3: Persistent Data** [[epic:#23]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/23)
+  - Objective 3.1: On save store all relavent variables unique to the user in a .JSON file [[story:#29]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/29)
+  - Objective 3.2: On sign in repopulate user unique variables with data stored in the .JSON [[story:#30]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/30)
+
+
 
 
 ## 3. Proposed Approaches
