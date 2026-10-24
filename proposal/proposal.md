@@ -42,9 +42,9 @@ Our Team has decided to build Project SonicScape, we intend for this program to 
 - **Goal 2: Music Preference Page** [[epic:#22]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/22)
   - Objective 2.1: Upon first login take users to a Music Preference page populated with Genres and Artists to choose from [[story:#27]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/27)
   - Objective 2.2: Store selected preferences in a dataframe unique to the user [[story:#28]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/28)
-- **Goal 3: Persistent Data** [[epic:#23]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/23)
-  - Objective 3.1: On save store all relavent variables unique to the user in a .JSON file [[story:#29]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/29)
-  - Objective 3.2: On sign in repopulate user unique variables with data stored in the .JSON [[story:#30]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/30)
+- **Goal 3: Personalized Map with a Persistent User Profile** [[epic:#23]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/23)
+  - Objective 3.1: Let users create an account or sign in. On first login, they pick starting genres and artists that seed their map. [[story:#29]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/29)
+  - Objective 3.2: Save each user’s profile, preferences, swipe history to a local database, and restore them on sign-in so the map reflects past sessions. [[story:#30]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/30)
 
 
 
