@@ -18,30 +18,35 @@ Our Team has decided to build Project SonicScape, we intend for this program to 
 ### 1.1 Related Work
 | Existing approach | What it does | Pros | Cons | Why ours differs |
 |---|---|---|---|---|
-| Spotify | Recommends music based on what users listen to | Easy to use, good playlist, personalized suggestions | Music discovery is mostly through playlist and search | Ecosphere makes discovering music more interactive by letting users explore the space theme world rather then boring screens |
-| Apple Music | Suggests songs, artists, playlists based on your preferences | Good recommendation and large music library | Using a traditional browsing experience | It focuses on exploration and visual interaction instead of standard menus |
-| YouTube Music | Recommends music using listening and viewing history | Large variety of music and personalized suggestions | Recommendations can become repetitiv | It encourages users to actively discover new music through exploration |
+| Spotify (incl. AL DJ) | Personalized playlists and an AI DJ that builds a running session from listening history; DJ accepts voice and text requests | Huge catalog, strong personalization, DJ can be steered by mood, genre, or artist | DJ is premium-only and frequently replays familiar tracks; discovery still runs through lists and search| SonicScape replaces lists with a galaxy users explore, and steers them toward nearby artists they haven’t heard yet rather than replaying favorites |
+| Music Galaxy | 3D visualization of ~70k artists positioned by shared audience; can overlay your Spotify top artists | closest to our idea; genuinely immersive navigation | Visualization only; no feedback loop, no recommendations, no playback flow | SonicScape lets users swipe to like or dislike anything they find and plays music as they explore, so the map responds to them instead of just displaying data |
+| YouTube Music | Recommends music using listening and Video-watch history | Very wide variety including covers, live versions and uploads | Recommendations loop back to the same artists; browsing is a standard list and menu layout | SonicScape turns browsing into exploring a galaxy and pushes users toward unfamiliar artists near what they already like |
+|Every Noise at Once| 2D scatter-plot map of thousands of genres; click a genre to hear a sample, drill into a map of its artists | Shows how genres relate spatially; great for curiosity-driver exploring | Same map for every user; doesn’t learn your taste, a reference tool, not a listening app | SonicScape builds a map unique to each user from their starting picks and swipe history, and remembers it between sessions
 
 
 ### 1.2 Problem Statements
 
 | Problem | Addressed by |
 |---|---|
-| P1 Music discovery can feel repetitive and non-engaging in traditional music apps | Goal 1 (#n) |
-| P2 Users may have difficulty finding new artists, songs, genres that match their interests | Goal 2 (#n) |
-| P3 Existing music apps provide limited interactive exploration features | Goal 3 (#n) |
+| P1 Users discover music mainly through lists, search, and AI sessions that tend to replay what they already listen to, so finding genuinely new music is hard. | Goal 1 |
+| P2 Spatial music tools let users explore but give them no quick way to say what they like or don’t, so the experience can’t respond to them. | Goal 2 |
+| P3 Existing music maps show the same view to everyone and don’t remember the user, so exploration never becomes personal. | Goal 3 |
+
+
 
 ## 2. Goals and Objectives
 
-- **Goal 1: Account Creation/Sign In** (Epic #1)
-  - Objective 1.1: Create user login page that will allow the users to either login to an existing account or create a new one (#1)
-  - Objective 1.2: Store users account data in local database to ensure login capability (#2)
-- **Goal 2: Music Preference Page** (Epic #2)
-  - Objective 2.1: Upon first login take users to a Music Preference page populated with Genres and Artists to choose from (#3)
-  - Objective 2.2: Store selected preferences in a dataframe unique to the user (#4)
-- **Goal 3: Personalized Map with a Persistent User Profile** (Epic #23)
-  - Objective 3.1: Let users create an account or sign in. On first login, they pick starting genres and artists that seed their map. (#29)
-  - Objective 3.2: Save each user’s profile, preferences, swipe history to a local database, and restore them on sign-in so the map reflects past sessions. (#30)
+- **Goal 1: Galaxy Navigation with Discovery-Focused Recommendations** [[epic:#21]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/21)
+  - Objective 1.1: Build a navigable music map where galaxies represent genres, star systems represent artists, and planets represent songs. Users can move between levels and play a song by selecting its planet. [[story:#25]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/25)
+  - Objective 1.2: Highlight star systems close to artists the user likes but haven’t visited yet, so each session surfaces artists that are new to the user. [[story:#26]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/26)
+- **Goal 2: Music Preference Page** [[epic:#22]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/22)
+  - Objective 2.1: Upon first login take users to a Music Preference page populated with Genres and Artists to choose from [[story:#27]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/27)
+  - Objective 2.2: Store selected preferences in a dataframe unique to the user [[story:#28]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/28)
+- **Goal 3: Personalized Map with a Persistent User Profile** [[epic:#23]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/23)
+  - Objective 3.1: Let users create an account or sign in. On first login, they pick starting genres and artists that seed their map. [[story:#29]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/29)
+  - Objective 3.2: Save each user’s profile, preferences, swipe history to a local database, and restore them on sign-in so the map reflects past sessions. [[story:#30]](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/30)
+
+
 
 
 ## 3. Proposed Approaches
