@@ -39,9 +39,9 @@ Our Team has decided to build Project SonicScape, we intend for this program to 
 - **Goal 2: Music Preference Page** (Epic #2)
   - Objective 2.1: Upon first login take users to a Music Preference page populated with Genres and Artists to choose from (#3)
   - Objective 2.2: Store selected preferences in a dataframe unique to the user (#4)
-- **Goal 3: Persistent Data** (Epic #3)
-  - Objective 3.1: On save store all relavent variables unique to the user in a .JSON file  (#5)
-  - Objective 3.2: On sign in repopulate user unique variables with data stored in the .JSON (#6)
+- **Goal 3: Personalized Map with a Persistent User Profile** (Epic #23)
+  - Objective 3.1: Let users create an account or sign in. On first login, they pick starting genres and artists that seed their map. (#29)
+  - Objective 3.2: Save each user’s profile, preferences, swipe history to a local database, and restore them on sign-in so the map reflects past sessions. (#30)
 
 
 ## 3. Proposed Approaches
