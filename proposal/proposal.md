@@ -1,11 +1,11 @@
-# Project Proposal — Echo Sphere
+# Project Proposal — SonicScape
 
 **Department of Computer Science**
 **CPSC 490 Undergraduate Seminar in Computer Science — Proposal for Capstone Project**
 
-**Group 17 — SonicScape ** · Sponsor: Independent
-Authors: Bhargava, Vibhor (vibhorbh), Deboer Bradley (braddeboer), Kaur Jaspreet (jaspreek9k), Alrubai Hassan (hassanalrubai02) 
-Date: 〈YYYY-MM-DD〉
+**Group 17 — SonicScape** · Sponsor: Independent
+Authors: Bhargava, Vibhor (vibhorbh), De Boer Bradley (braddeboer), Kaur Jaspreet (jaspreek9k), Alrubai Hassan (hassanalrubai02) 
+Date: 2026-09-17
 
 ## 0. Abstract
 Our goal as a team was to make a music app but after doing a little bit of market research, we found that most music apps have the same features i.e., liking songs, adding songs to playlists, searching up features and paying a premium to get no ads, the UI is plain and old and even regular app updates don't bring much changes so we felt the need to make the user experience more interesting by using planets and subsystems as our base idea. In our project, we want to build a new style of music app where the users will be able to listen to music in a new way that hasn't been explored much, as planets and star systems, you will be able to click into planets and star systems to switch genres and play around with playlists and songs instead of using those same old boring flat interfaces every other music app gives you. We want to give users the feeling that using the "premium" music apps shouldn't be industry standard that everyone has to use, we want music apps to become more experimental and playful even. 
@@ -13,7 +13,7 @@ Our goal as a team was to make a music app but after doing a little bit of marke
 For SonicScape, we want the app to feel more like exploring than just scrolling through another music platform. Instead of only giving users playlists or random recommendations, the app will let them move through different planets and star systems that represent genres, artists, and songs. As users like, dislike, or skip music, the app can slowly learn what they enjoy and use that to improve future recommendations. The main goal is to make discovering music feel more fun, personal, and interactive, while still keeping the basic features people expect from a music app.
 
 ## 1. Introduction
-Our Team has decided to build Project SonicScape, we intend for this program to pull and parse information from Nasa's official website utilizing the free API keys that Nasa has to offer as well as potentially utilizing databases of music to organize a users preference on our own backend rather than relying fully on an llm. Once we are able to build the API parser and pull information we plan to utilize mapping of solar systems to create a music app that allows the user to traverse galaxies/star systems which will be interpreted as different music genres and artists. As the user begins traversing they will be able to swipe right or left on the given artist/genre to confirm or deny their fondness of the music. The current plan is to have Galaxies represent music Genres, Star Systems represent Artists, and individual planets representing songs from the Artists. We plan to incorporate some level of AI to begin creating a custom profile of the individual users music taste to help them find new music similar to what they already like. Our Project hopes to solve the problem of large corporations inbuilt AI models such as "DJ X" from Spotify. As a user of both Spotify and its DJ X for years now our team can personally attest to the lack luster nature of this AI DJ, often when you select the DJ they play music that you already are listening to, claim to get ready to play music that will quote "pump you up" just to play soft indie music, and just generally suggest poor music related to what you actually listen to.
+Our Team has decided to build Project SonicScape, we intend for this program to pull and parse information from Nasa's official website utilizing the free API keys that Nasa has to offer as well as potentially utilizing databases of music to organize a users preference on our own backend rather than relying fully on an llm. Once we are able to build the API parser and pull information we plan to utilize mapping of solar systems to create a music app that allows the user to traverse galaxies/star systems which will be interpreted as different music genres and artists. As the user begins traversing they will be able to swipe right or left on the given genre/artist/song to confirm or deny their fondness of the music. The current plan is to have Galaxies represent music Genres, Star Systems represent Artists, and individual planets representing songs from the Artists. We plan to incorporate some level of AI to begin creating a custom profile of the individual users music taste to help them find new music similar to what they already like. Our Project hopes to solve the problem of large corporations inbuilt AI models such as "DJ X" from Spotify. As a user of both Spotify and its DJ X for years now our team can personally attest to the lack luster nature of this AI DJ, often when you select the DJ they play music that you already are listening to, claim to get ready to play music that will quote "pump you up" just to play soft indie music, and just generally suggest poor music related to what you actually listen to.
 
 ### 1.1 Related Work
 | Existing approach | What it does | Pros | Cons | Why ours differs |
@@ -51,24 +51,17 @@ Our Team has decided to build Project SonicScape, we intend for this program to 
 
 ## 3. Proposed Approaches
 
-> Describe your proposed approach to solve the problem, specifying how you
-> will achieve the stated goals. List some possible strategies.
+Our strategy is to replace list-based music discovery with a sequence of star systems that responds to the user’s direct feedback. The map is a three-level hierarchy: galaxies are genres, star systems are artists, and planets are songs. Each goal below states our approach, the alternatives we considered, and why we chose as we did. The implementation stack is detailed in §4.
 
-〈Your approach — **clear and concise**. State the strategy you chose, the
-alternatives you considered, and the reasoning that decided between them.
-Think of this as the argument, not the manual: a reader should finish this
-section understanding *what* you will do and *why that* rather than the
-alternatives.〉
+Goal 1: Galaxy Navigation with Discovery-Focused Recommendations
+- We will generate each user’s sequence of star systems from a stored dataset that the interface reads, rather than hardcoding one base map, so every user gets an individual experience of SonicScape. Astronomical data supplies the visual theme, such as star and planet names. Music data supplies what the each system means: artist similarity decides which star systems will be visited next. We rejected a purely decorative space theme because it would not solve the discovery problem (P1), and a free-form map showing many star systems at once because it leaves users with too many options and no clear unit to select or give feedback on. The genre → artist → song hierarchy gives users a clear path from genre, to an artists sytem, to a specific song. We rejected an unconstrained LLM-driven recommender as the core mechanism, because its output is hard to verify and tends to repeat familiar music, the weakness that motivated this project. As a stretch goal, an LLM may propose additional candidate genres, artists, and songs, but every candidate must exist in our music dataset and pass the same novelty and similarity ranking as any other, so the LLM widens the pool without choosing what the user sees.
+- Selecting a planet opens the song on an external listening service, which works for any track in our data and needs no audio licensing. Two features are stretch goals: an LLM that proposes extra candidates, and short in-app preview clips. An LLM-proposed candidate must exist in our music dataset and pass the same novelty and similarity ranking as any other, so the LLM widens the pool without choosing what the user sees. In-app clips depend on third-party terms we do not control, and our focus is discovery, not playback.
 
-**Keep the details out of this section.** Tooling, platforms, frameworks,
-DBMS choices, environment setup, diagrams, and the work breakdown all belong
-in §4 (Required Environment, Resources, and Planned Activities). If a
-sentence here names a version number, a library, or a configuration, it
-probably belongs in §4 — leave a pointer instead ("the implementation stack
-is detailed in §4").
+Goal 2: Swipe Feedback
+- Users record a like or dislike by swiping left or right on any genre, artist, or song. We chose explicit swipes because they are fast, familiar, and unambiguous. We rejected inferring taste from skips, because a skip can mean dislike, bad timing, or a song already heard, and star ratings, because they are precise but slow enough to interrupt exploration. Each swipe updates the same similarity ranking: items similar to liked ones move up, and disliked items and their close neighbors move down. We rejected collaborative filtering for this step because it needs a large user base we will not have. This addresses P2, because what the user sees next responds directly to their feedback.
 
-〈A few paragraphs, or a short list of candidate strategies with one line of
-trade-off each. If it runs past a page, you are writing §4.〉
+Goal 3: Personalized Map with a Persistent User Profile
+- On first sign-in, users pick starting genres and artists that seed what they are shown first. Their picks, swipe history, and derived preferences are stored locally and restored at each sign-in, so recommendations continue from past sessions. We rejected stateless sessions, because persistence is what makes the experience personal, and its absence is the gap in tools that show every user the same view (P3). We chose local storage over a hosted service because it keeps setup simple for a single-user application and avoids the cost of running a server.
 
 ## 4. Required Environment, Resources, and Planned Activities
 
