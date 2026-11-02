@@ -3,7 +3,7 @@
 Written in EARS form — "when 〈trigger〉, the system shall 〈response〉" — so each
 one becomes a test almost verbatim.
 
-| ID | Requirement | Story |
+| ID | Requirement | Story | 
 |---|---|---|
 | FR-1 | When a user swipes right on a genre, artist, or song, the system shall record a like for that item. | 2.1 |
 | FR-2 | When a user swipes left on a genre, artist, or song, the system shall record a dislike for that item. | 2.1 |
