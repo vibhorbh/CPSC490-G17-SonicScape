@@ -1,8 +1,11 @@
-Epic: #1 Stories: #22
-Goal 2 Design
+> Epic: #1
+> Stories: #22
 
-Swipe Sequence Diagram
+# Goal 2 Design
 
+## Swipe Sequence Diagram
+
+```mermaid
 sequenceDiagram
     actor User
     participant App
@@ -14,3 +17,4 @@ sequenceDiagram
     FeedbackSystem->>RecommendationEngine: Update Ranking
     RecommendationEngine-->>App: Updated Recommendations
     App-->>User: Visual Confirmation
+```
