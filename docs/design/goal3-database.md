@@ -15,15 +15,15 @@ reflects earlier sessions (#29, #30).
 The database technology and the final schema are **not decided**. Items that
 need a team decision are collected in §7.
 
+
 ## 2. Entity-relationship diagram
 
 Figure 1 shows which entities SonicScape stores, how they relate, and which
 columns are primary keys (PK), foreign keys (FK), and unique keys (UK). The
-editable source is [`diagrams/goal3-er-diagram.mmd`](diagrams/goal3-er-diagram.mmd) and the
-exported image is [`diagrams/goal3-er-diagram.png`](diagrams/goal3-er-diagram.png).
+editable source is [`goal3-er-diagram.mmd`](goal3-er-diagram.mmd) and the
+exported image is [`goal3-er-diagram.png`](goal3-er-diagram.png).
 
-![ER diagram: USER owns genre preferences, artist preferences, and swipe
-history; GENRE, ARTIST, and SONG form the shared music catalogue](diagrams/goal3-er-diagram.png)
+![ER diagram: USER owns genre preferences, artist preferences, and swipe history; GENRE, ARTIST, and SONG form the shared music catalogue](goal3-er-diagram.png)
 
 ```mermaid
 erDiagram
