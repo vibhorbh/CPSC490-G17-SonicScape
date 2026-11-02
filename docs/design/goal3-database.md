@@ -214,11 +214,12 @@ Requirement IDs are from [`specs_goal3.md`](../specs/specs_goal3.md).
 | NFR-3 | Every per-user row carries a `user_id`, and reads and writes filter on it. |
 | NFR-4 | Per-user tables may hold zero rows for a user. |
 
+
 ## 9. Verification checklist
 
 - [ ] Team confirms the entities and relationships.
 - [ ] Team confirms the local database technology.
-- [ ] Mermaid diagram renders in GitHub.
-- [ ] Source (`.mmd`) and exported image (`.png`) are in `docs/design/diagrams/`.
+- [x] Mermaid diagram renders in GitHub.
+- [x] Source (`.mmd`) and exported image (`.png`) are in `docs/design/`.
 - [ ] Figure is referenced from proposal §4 and listed in the document index.
 - [ ] Design reviewed against #29 and #30.
