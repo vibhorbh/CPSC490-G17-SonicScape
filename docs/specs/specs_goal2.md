@@ -5,12 +5,12 @@ one becomes a test almost verbatim.
 
 | ID | Requirement | Story |
 |---|---|---|
-| FR-1 | When a user swipes right on a genre, artist, or song, the system shall record a like for that item. | 〈#n〉 2.1 |
-| FR-2 | When a user swipes left on a genre, artist, or song, the system shall record a dislike for that item. | 〈#n〉 2.1 |
-| FR-3 | When a swipe is recorded, the system shall show the user a visual confirmation. | 〈#n〉 2.1 |
-| FR-4 | When a like is recorded, the system shall move items similar to the liked item up the similarity ranking. | 〈#n〉 2.2 |
-| FR-5 | When a dislike is recorded, the system shall move the disliked item and its close neighbors down the similarity ranking. | 〈#n〉 2.2 |
-| FR-6 | When the ranking changes, the system shall update the map's highlights in the same session, without the user signing out and back in. | 〈#n〉 2.2 |
+| FR-1 | When a user swipes right on a genre, artist, or song, the system shall record a like for that item. | 2.1 |
+| FR-2 | When a user swipes left on a genre, artist, or song, the system shall record a dislike for that item. | 2.1 |
+| FR-3 | When a swipe is recorded, the system shall show the user a visual confirmation. | 2.1 |
+| FR-4 | When a like is recorded, the system shall move items similar to the liked item up the similarity ranking. | 2.2 |
+| FR-5 | When a dislike is recorded, the system shall move the disliked item and its close neighbors down the similarity ranking. | 2.2 |
+| FR-6 | When the ranking changes, the system shall update the map's highlights in the same session, without the user signing out and back in. | 2.2 |
 
 ## Non-functional requirements
 
