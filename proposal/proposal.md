@@ -95,6 +95,12 @@ figure the text never mentions is decoration. See `docs/design/DIAGRAMS.md`
 for tools, conventions, and the rule that every box and arrow must be
 verified against reality.〉
 
+### Goal 1 Screen Flow
+
+![Figure 1: Goal 1 screen flow diagram](../docs/screenflow.drawio.png)
+*Figure 1 — Goal 1 Screen Flow diagram. [View editable Mermaid source](../docs/design/screenflow.md).*
+
+
 ### Specification and design documents
 
 **Every specification and design document the team writes is listed here**
@@ -105,8 +111,8 @@ buildable. CI gate G9 fails if a document exists in `docs/specs/` or
 
 | Document | Kind | Covers | Issues |
 |---|---|---|---|
-| 〈docs/specs/account-management.md〉 | specification | 〈account management requirements〉 | 〈#n, #n〉 |
-| 〈docs/design/architecture.md〉 | design | 〈system architecture + data model〉 | 〈#n〉 |
+| [Goal 1 Specification](../docs/specs/specs_goal1.md) | specification | Goal 1 - Galaxy Navigation and Discovery Recommendations | #21, #25, #26, #47 |
+| [Goal 1 Screen Flow](../docs/design/screenflow.md) | design | Goal 1 - Galaxy Navigation and Discovery Recommendations | #21, #25, #26, #46 |
 
 〈The scaffold ships `docs/specs/example-spec.md` and
 `docs/design/example-design.md` as worked examples — read them, then delete
@@ -124,8 +130,8 @@ G8 fails if such an issue exists that this section does not link.
 
 | Issue | Type | Activity | Parent | Owner | Sprint |
 |---|---|---|---|---|---|
-| 〈#n〉 | 〈task〉 | 〈stand up the prototype login endpoint〉 | 〈#story〉 | 〈owner〉 | 〈Sprint 1〉 |
-| 〈#n〉 | 〈feature/enhancement/bug/task/sub-task〉 | 〈…〉 | 〈#story〉 | 〈…〉 | 〈…〉 |
+| [#46](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/46) | task | Create goal 1 screen flow diagram | #25, #26 | vibhorbh | Sprint 2 |
+| [#47](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/47) | task | Write goal 1 specifications in specs_goal1.md | #25, #26 | vibhorbh | Sprint 2 |
 
 〈Replace these rows with your own, and keep the table current as you file new
 issues — with §2 it gives a reader every planned activity in one place, each
