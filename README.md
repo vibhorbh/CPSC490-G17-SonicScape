@@ -25,7 +25,7 @@
 
 ## Project summary
 
-EchoSphere is a music discovery application designed to make finding new music more interactive and engaging. Instead of using a traditional music app interface, users will explore a space-themed environment where galaxies represent music genres, star systems represent artists, and planets represent individual songs. Users will be able to like or dislike music as they explore, allowing the application to learn their music preferences over time. The goal is to use those preferences to recommend new music while making the discovery process feel more immersive and enjoyable.
+SonicScape is a music discovery application designed to make finding new music more interactive and engaging. Instead of using a traditional music app interface, users will explore a space-themed environment where galaxies represent music genres, star systems represent artists, and planets represent individual songs. Users will be able to like or dislike music as they explore, allowing the application to learn their music preferences over time. The goal is to use those preferences to recommend new music while making the discovery process feel more immersive and enjoyable.
 
 ## How we work
 

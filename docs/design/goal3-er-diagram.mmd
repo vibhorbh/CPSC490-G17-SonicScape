@@ -1,0 +1,57 @@
+erDiagram
+    USER ||--o{ USER_GENRE_PREFERENCE : selects
+    USER ||--o{ USER_ARTIST_PREFERENCE : selects
+    USER ||--o{ SWIPE_HISTORY : records
+
+    GENRE ||--o{ USER_GENRE_PREFERENCE : selected_by
+    ARTIST ||--o{ USER_ARTIST_PREFERENCE : selected_by
+
+    GENRE ||--o{ ARTIST : categorizes
+    ARTIST ||--o{ SONG : creates
+
+    USER {
+        int user_id PK
+        string username UK "unique, rejects duplicates (FR-10)"
+        string password_hash "salted, never plaintext (NFR-1)"
+        datetime created_at
+    }
+
+    GENRE {
+        int genre_id PK
+        string name UK
+    }
+
+    ARTIST {
+        int artist_id PK
+        int genre_id FK
+        string name
+    }
+
+    SONG {
+        int song_id PK
+        int artist_id FK
+        string title
+    }
+
+    USER_GENRE_PREFERENCE {
+        int preference_id PK
+        int user_id FK "owner (NFR-3)"
+        int genre_id FK "unique with user_id (FR-5)"
+        datetime selected_at
+    }
+
+    USER_ARTIST_PREFERENCE {
+        int preference_id PK
+        int user_id FK "owner (NFR-3)"
+        int artist_id FK "unique with user_id (FR-5)"
+        datetime selected_at
+    }
+
+    SWIPE_HISTORY {
+        int swipe_id PK
+        int user_id FK "owner (NFR-3)"
+        string target_type "genre, artist, or song (FR-7)"
+        int target_id "id in the table named by target_type"
+        string direction "left or right (FR-7)"
+        datetime swiped_at
+    }
