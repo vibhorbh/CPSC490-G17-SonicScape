@@ -93,6 +93,10 @@ reference them here.
 | Dev tools | pytest, GitHub Actions, Mermaid | Tests for ranking and storage logic; diagrams kept as editable source. |
 | Optional | LLM service (stretch goal, undecided) | Proposes extra candidates validated against the dataset (Goal 1). |
 
+### Data Flow Diagram
+![Figure 1: Data Flow Diagram](../docs/design/dataflow.drawio.png) 
+*Figure 1 — Data Flow diagram. [View editable Mermaid source](../docs/design/dataflow.md).*
+
 ### Goal 1 Screen Flow
 
 ![Figure 1: Goal 1 screen flow diagram](../docs/screenflow.drawio.png)
@@ -119,7 +123,7 @@ buildable. CI gate G9 fails if a document exists in `docs/specs/` or
 |---|---|---|---|
 | [Goal 1 Specification](../docs/specs/specs_goal1.md) | specification | Goal 1 - Galaxy Navigation and Discovery Recommendations | #21, #25, #26, #47 |
 | [Goal 1 Screen Flow](../docs/design/screenflow.md) | design | Goal 1 - Galaxy Navigation and Discovery Recommendations | #21, #25, #26, #46 |
-| 〈docs/specs/account-management.md〉 | specification | 〈account management requirements〉 | 〈#n, #n〉 |
+| [Data Flow Diagram](../docs/design/dataflow.md) | Design | Goal 1 - Galaxy Navigation and Discovery Recommendations | #21, #25, #26, #53 |
 | 〈docs/design/architecture.md〉 | design | 〈system architecture + data model〉 | 〈#n〉 |
 | [Goal 3 Specification](../docs/specs/specs_goal3.md) | specification | Goal 3 — Persistent User Profile | #23, #29, #30, #42 |
 | [Goal 3 Database Design](../docs/design/goal3-database.md) | design | Goal 3 — Persistent User Profile | #23, #29, #30, #43 |
@@ -143,7 +147,7 @@ G8 fails if such an issue exists that this section does not link.
 |---|---|---|---|---|---|
 | [#46](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/46) | task | Create goal 1 screen flow diagram | #25, #26 | vibhorbh | Sprint 2 |
 | [#47](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/47) | task | Write goal 1 specifications in specs_goal1.md | #25, #26 | vibhorbh | Sprint 2 |
-| 〈#n〉 | 〈task〉 | 〈stand up the prototype login endpoint〉 | 〈#story〉 | 〈owner〉 | 〈Sprint 1〉 |
+| [#53](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/53) | task | Create goal 1 data flow diagram | #25, #26 | vibhorbh | Sprint 2 |
 | 〈#n〉 | 〈feature/enhancement/bug/task/sub-task〉 | 〈…〉 | 〈#story〉 | 〈…〉 | 〈…〉 |
 | [#42](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/42) | task | Write Goal 3 specification | #29, #30 | hassanalrubai02 | Sprint 2 |
 | [#43](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/43) | task | Create Goal 3 database design and ER diagram | #29, #30 | hassanalrubai02 | Sprint 2 |
