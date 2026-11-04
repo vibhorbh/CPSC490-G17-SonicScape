@@ -72,8 +72,6 @@ Goal 3: Personalized Map with a Persistent User Profile
 > Describe the expected activities to achieve the stated goals, e.g.,
 > software development process.
 
-〈Your environment, resources, and planned activities.〉
-
 **Diagrams belong in this section.** Include at minimum a high-level
 architecture diagram and a system (context) diagram; add the ER/EER model and
 a data-flow diagram where they help the reader understand what you are
@@ -82,11 +80,18 @@ building and what it depends on. Draw them with any graphical tool
 copies in `docs/design/` with both editable source and exported image, and
 reference them here.
 
-〈Number every figure, caption it, and point at it from the prose — "Figure 1
-shows the three deployment tiers and the trust boundary between them." A
-figure the text never mentions is decoration. See `docs/design/DIAGRAMS.md`
-for tools, conventions, and the rule that every box and arrow must be
-verified against reality.〉
+### Environment and Resources
+| Choice | Selected | Reason (tied to §3) |
+|---|---|---|
+| Language | Python 3.10+ | One language for the interface, data handling, and ranking logic keeps the team in a single toolchain. |
+| Interface | Arcade (2D) | Shows one star system at a time with clickable planets and swipe input (Goals 1 and 2) without a separate web front end. |
+| Database | SQLite | Local, serverless storage for accounts, preferences, and swipe history (Goal 3). |
+| Music data | Last.fm API | Provides artist similarity and tags, which drive the ranking that decides the next star system (Goal 1). |
+| Astronomical data | NASA open APIs | Supplies star and planet names for the visual theme only (Goal 1). |
+| Song playback | External link-out (Spotify, YouTube); in-app clips are a stretch goal | Last.fm has no audio; link-out works for any track without licensing (Goal 1). |
+| API keys | `.env` file, with `.env.example` committed | Keeps secrets out of the repository. |
+| Dev tools | pytest, GitHub Actions, Mermaid | Tests for ranking and storage logic; diagrams kept as editable source. |
+| Optional | LLM service (stretch goal, undecided) | Proposes extra candidates validated against the dataset (Goal 1). |
 
 ### Goal 1 Screen Flow
 
