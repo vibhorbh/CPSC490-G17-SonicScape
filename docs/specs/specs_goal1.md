@@ -1,7 +1,7 @@
 # Specification — Navigation and Discovery
 
 > Epic: #21 · Stories: #25 (1.1), #26 (1.2)
-> Owner: 〈name〉 · Sprint: 2 · Status: draft
+> Owner: vibhorbh · Sprint: 2 · Status: draft
 
 ## Scope
 
