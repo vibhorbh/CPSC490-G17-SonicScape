@@ -1,6 +1,6 @@
 # Specification: Swipe Feedback
 
-> Epic: #22 · Stories: 2.1, 2.2
+> Epic: #22 · Stories: #27 (2.1) , #28 (2.2)
 > Owner: Jaspreet Kaur · Sprint: 2 · Status: draft
 
 ## Scope
