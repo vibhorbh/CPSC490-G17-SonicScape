@@ -172,7 +172,7 @@ buildable. CI gate G9 fails if a document exists in `docs/specs/` or
 | [Goal 1 Specification](../docs/specs/specs_goal1.md) | specification | Goal 1 - Galaxy Navigation and Discovery Recommendations | #21, #25, #26, #47 |
 | [Goal 1 Screen Flow](../docs/design/screenflow.md) | design | Goal 1 - Galaxy Navigation and Discovery Recommendations | #21, #25, #26, #46 |
 | [Data Flow Diagram](../docs/design/dataflow.md) | Design | Goal 1 - Galaxy Navigation and Discovery Recommendations | #21, #25, #26, #53 |
-| [Goal 2 Swipe Sequence Diagram (docs/design/goal2-design.md)] [docs/design/architecture.md] | design | Goal 2 - Swipe feedback and Recommendation updates〉 | #22, #27, #28 |
+| [Goal 2 Swipe Sequence Diagram](docs/design/goal2-design.md) and [Architectural Design](docs/design/architecture.md) | design | Goal 2 - Swipe feedback and Recommendation updates〉 | #22, #27, #28 |
 | [Goal 3 Specification](../docs/specs/specs_goal3.md) | specification | Goal 3 — Persistent User Profile | #23, #29, #30, #42 |
 | [Goal 3 Database Design](../docs/design/goal3-database.md) | design | Goal 3 — Persistent User Profile | #23, #29, #30, #43 |
 
