@@ -1,6 +1,6 @@
 # Prototype
 
-Proof-of-concept code for 〈project title〉. **Prototype v0 is due Sep 27** with
+Proof-of-concept code for SonicScape. **Prototype v0 is due Sep 27** with
 the proposal, and it grows every sprint; the Week-8 in-class check demos from
 this folder.
 
