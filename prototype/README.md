@@ -4,13 +4,6 @@ Proof-of-concept code for SonicScape. **Prototype v0 is due Sep 27** with
 the proposal, and it grows every sprint; the Week-8 in-class check demos from
 this folder.
 
-This example implements the login slice behind story
-[#3](../../../issues/3) and task [#5](../../../issues/5) — deliberately tiny,
-because a prototype exists to answer one risky question, not to be the
-product. **Replace it with yours** and keep the shape: a small module, a test
-per acceptance criterion, and run instructions below that work on a machine
-that has never seen your project.
-
 ## How to run
 
 ```bash
