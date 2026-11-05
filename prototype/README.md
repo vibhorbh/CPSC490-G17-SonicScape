@@ -1,21 +1,14 @@
 # Prototype
 
-Proof-of-concept code for 〈project title〉. **Prototype v0 is due Sep 27** with
+Proof-of-concept code for SonicScape. **Prototype v0 is due Sep 27** with
 the proposal, and it grows every sprint; the Week-8 in-class check demos from
 this folder.
-
-This example implements the login slice behind story
-[#3](../../../issues/3) and task [#5](../../../issues/5) — deliberately tiny,
-because a prototype exists to answer one risky question, not to be the
-product. **Replace it with yours** and keep the shape: a small module, a test
-per acceptance criterion, and run instructions below that work on a machine
-that has never seen your project.
 
 ## How to run
 
 ```bash
-cd prototype
-python login.py                 # smoke run: prints a truncated session token
+cd prototype/src/sonicscape
+python main.py #no current code as program prototype will be developed in the next sprint
 ```
 
 ## How to test
@@ -32,13 +25,13 @@ tests**). If you use Node instead of Python, put a `package.json` here with a
 
 ## What it proves
 
-That credentials can be checked and a session token issued, with unknown-user
-and wrong-password failures indistinguishable to the caller — the riskiest
-assumption in 〈the epic this belongs to〉.
+That the project structure, dependency list, and configuration template are in
+place and match the architecture diagram, so Sprint 3 can add the first
+end-to-end slice without restructuring.
 
 ## Status
 
 | Sprint | Increment |
 |---|---|
-| v0 (Sep 27) | login check + 4 tests (this example) |
-| Sprint 1 | 〈what you added〉 |
+| Sprint 2 | Project Skeleton, .env.example, README |
+| Sprint 3 | Planned: first end-to-end slice |
