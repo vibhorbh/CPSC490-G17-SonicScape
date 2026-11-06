@@ -1,5 +1,5 @@
-> Epic: #1
-> Stories: #21, #22, #23
+> Epic: #22
+> Stories: #27 , #28
 
 # System Context Diagram
 
@@ -7,7 +7,7 @@
 graph LR
     User[User]
     SonicScape[SonicScape System]
-    Spotify[Spotify API]
+    Last.fm[Last.fm API]
     Database[(Database)]
 
     User --> SonicScape
