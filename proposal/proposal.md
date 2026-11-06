@@ -64,22 +64,6 @@ Goal 3: Personalized Map with a Persistent User Profile
 - On first sign-in, users pick starting genres and artists that seed what they are shown first. Their picks, swipe history, and derived preferences are stored locally and restored at each sign-in, so recommendations continue from past sessions. We rejected stateless sessions, because persistence is what makes the experience personal, and its absence is the gap in tools that show every user the same view (P3). We chose local storage over a hosted service because it keeps setup simple for a single-user application and avoids the cost of running a server.
 
 ## 4. Required Environment, Resources, and Planned Activities
-
-> Review the required and available resources and environment to complete
-> your project. For example, server, platform, software tools, operating
-> systems, DBMS, or any required skills.
->
-> Describe the expected activities to achieve the stated goals, e.g.,
-> software development process.
-
-**Diagrams belong in this section.** Include at minimum a high-level
-architecture diagram and a system (context) diagram; add the ER/EER model and
-a data-flow diagram where they help the reader understand what you are
-building and what it depends on. Draw them with any graphical tool
-(Lucidchart, draw.io, Miro, Mermaid, ERDPlus, Figma), keep the authoritative
-copies in `docs/design/` with both editable source and exported image, and
-reference them here.
-
 ### Environment and Resources
 | Choice | Selected | Reason (tied to §3) |
 |---|---|---|
@@ -161,12 +145,6 @@ Figure 1 shows how SonicScape stores user accounts, music preferences, and swipe
 
 ### Specification and design documents
 
-**Every specification and design document the team writes is listed here**
-with the objective it serves. This section is the index of the project's
-technical detail: §3 holds the argument, §4 holds the documents that make it
-buildable. CI gate G9 fails if a document exists in `docs/specs/` or
-`docs/design/` that this section does not link.
-
 | Document | Kind | Covers | Issues |
 |---|---|---|---|
 | [Goal 1 Specification](../docs/specs/specs_goal1.md) | specification | Goal 1 - Galaxy Navigation and Discovery Recommendations | #21, #25, #26, #47 |
@@ -177,34 +155,15 @@ buildable. CI gate G9 fails if a document exists in `docs/specs/` or
 | [Goal 3 Specification](../docs/specs/specs_goal3.md) | specification | Goal 3 — Persistent User Profile | #23, #29, #30, #42 |
 | [Goal 3 Database Design](../docs/design/goal3-database.md) | design | Goal 3 — Persistent User Profile | #23, #29, #30, #43 |
 
-
-〈The scaffold ships `docs/specs/example-spec.md` and
-`docs/design/example-design.md` as worked examples — read them, then delete
-them once you have your own, and list yours here.〉
-
-〈Replace these rows with your own. Each document names its epic and stories
-in its own first lines too (gate G2), so the trail runs both ways.〉
-
 ### Planned activities — the work items
-
-The goals and objectives live in §2 as epics and user stories. **This section
-links every *other* work item: features, enhancements, bugs, tasks, and
-sub-tasks** — the concrete activities that deliver those objectives. CI gate
-G8 fails if such an issue exists that this section does not link.
 
 | Issue | Type | Activity | Parent | Owner | Sprint |
 |---|---|---|---|---|---|
 | [#46](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/46) | task | Create goal 1 screen flow diagram | #25, #26 | vibhorbh | Sprint 2 |
 | [#47](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/47) | task | Write goal 1 specifications in specs_goal1.md | #25, #26 | vibhorbh | Sprint 2 |
 | [#53](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/53) | task | Create goal 1 data flow diagram | #25, #26 | vibhorbh | Sprint 2 |
-| 〈#n〉 | 〈feature/enhancement/bug/task/sub-task〉 | 〈…〉 | 〈#story〉 | 〈…〉 | 〈…〉 |
 | [#42](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/42) | task | Write Goal 3 specification | #29, #30 | hassanalrubai02 | Sprint 2 |
 | [#43](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/43) | task | Create Goal 3 database design and ER diagram | #29, #30 | hassanalrubai02 | Sprint 2 |
-
-
-〈Replace these rows with your own, and keep the table current as you file new
-issues — with §2 it gives a reader every planned activity in one place, each
-traceable to the objective it serves.〉
 
 ## 5. Project Outcomes
 
