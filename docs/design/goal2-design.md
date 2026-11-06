@@ -1,5 +1,5 @@
-> Epic: #1
-> Stories: #22
+> Epic: #22
+> Stories: #27 , #28
 
 # Goal 2 Design
 
