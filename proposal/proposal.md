@@ -127,11 +127,11 @@ the major pieces of the system and how do they connect?*
 graph LR
     User[User]
     SonicScape[SonicScape System]
-    Spotify[Spotify API]
+    Last.fm[Last.fm API]
     Database[(Database)]
 
     User --> SonicScape
-    SonicScape --> Spotify
+    SonicScape --> Last.fm
     SonicScape --> Database
 ```
 
