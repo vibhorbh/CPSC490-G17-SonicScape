@@ -11,6 +11,6 @@ graph LR
     Database[(Database)]
 
     User --> SonicScape
-    SonicScape --> Spotify
+    SonicScape --> Last.fm
     SonicScape --> Database
 ```
