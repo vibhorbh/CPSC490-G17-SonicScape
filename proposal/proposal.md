@@ -85,9 +85,10 @@ Figure 1 shows how data moves through SonicScape, from the outside sources it re
 
 ### Goal 1 Screen Flow
 
-![Figure 1: Goal 1 screen flow diagram](../docs/screenflow.drawio.png)
-*Figure 1 — Goal 1 Screen Flow diagram. [View editable Mermaid source](../docs/design/screenflow.md).*
+![Figure 2: Goal 1 screen flow diagram](../docs/screenflow.drawio.png)
+*Figure 2 — Goal 1 Screen Flow diagram. [View editable Mermaid source](../docs/design/screenflow.md).*
 
+Figure 2 shows how a user moves between SonicScape's screens, centered on galaxy navigation and discovery (Epic #21). Every session begins at the Sign In screen, where a new user can go to Register, a first-time user is taken to Starting Picks to choose the genres and artists that seed their map, and a returning user goes straight to the Galaxy View. A failed sign-in keeps the user on the Sign In screen with an error message. From the Galaxy View, which shows genres, the user selects a galaxy to open the Star System View of that genre's artists, then selects a star system to open the Planet View of that artist's songs, and finally selects a planet to open the song on an external listening service (Story #25). Each map level has a back path to the level above it, so the hierarchy works as a clear path from broad exploration to a specific song rather than a maze. As the user explores, star systems similar to artists they have liked but not yet visited are highlighted on the map (Story #26), and the dashed loops on all three map screens show that swiping to like or dislike updates those highlights without leaving the current view. Signing out from any map screen returns the user to the Sign In screen.
 
 ### Goal 2 Swipe Sequence Diagram
 ```mermaid
