@@ -81,10 +81,13 @@ Goal 3: Personalized Map with a Persistent User Profile
 ![Figure 1: Data Flow Diagram](../docs/design/dataflow.drawio.png) 
 *Figure 1 — Data Flow diagram. [View editable Mermaid source](../docs/design/dataflow.md).*
 
+Figure 1 shows how data moves through SonicScape, from the outside sources it relies on to the local stores where it is kept, and covers all three goals (Epics #21, #22, and #23). Before anyone uses the app, a one-time import (process 0) pulls genres, artists, songs, and artist similarity from a music data source into the music dataset (D3), along with star and planet names from an astronomical data source into D4, so the map never depends on an outside service while a user is exploring. When a user registers or signs in, process 1 checks their credentials against the user accounts store (D1), where passwords are kept only as salted hashes, and on first sign-in process 2 saves the genres and artists they pick to their profile (D2), as described in Story #29. Process 3 then builds the user's personal map (Story #25) by combining the music dataset, the astronomical names used as labels, their saved profile, and the star systems highlighted by process 5. Each time the user swipes, process 4 records the like or dislike in D2 (Story #27) and passes it to process 5, which combines the user's likes, dislikes, and visits with artist similarity to decide which unvisited star systems to highlight (Stories #26 and #28), saving these derived preferences back to D2 so the map updates in the same session. Finally, when the user selects a planet, process 6 looks up the song's link in D3 and opens it on an external listening service, since SonicScape does not play or store audio itself. Because the user's picks, swipes, and preferences are saved locally and restored at each sign-in (Story #30), and every recommendation flows through process 5, each highlight can be traced back to the specific likes and similarity scores that produced it.
+
 ### Goal 1 Screen Flow
 
 ![Figure 1: Goal 1 screen flow diagram](../docs/screenflow.drawio.png)
 *Figure 1 — Goal 1 Screen Flow diagram. [View editable Mermaid source](../docs/design/screenflow.md).*
+
 
 ### Goal 2 Swipe Sequence Diagram
 ```mermaid
