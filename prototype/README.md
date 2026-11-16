@@ -7,8 +7,11 @@ this folder.
 ## How to run
 
 ```bash
-cd prototype/src/sonicscape
-python main.py #no current code as program prototype will be developed in the next sprint
+cd cd CPSC490-G17-SonicScape\prototype
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python -m src.sonicscape.main
 ```
 
 ## How to test
