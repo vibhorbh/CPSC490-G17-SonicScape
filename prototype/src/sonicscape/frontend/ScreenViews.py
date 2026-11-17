@@ -1,6 +1,7 @@
 import arcade
 import arcade.gui
 from src.sonicscape.frontend.helpers import is_over
+from src.sonicscape.database.db import create_user, verify_user
 
 class SignInScreen(arcade.View):
     #Arcade View code for the Sign in screen for SonicScape      
@@ -66,7 +67,8 @@ class LoginScreen(arcade.View):
         self.Password_input = arcade.gui.UIInputText(width = 300, height = 40, font_size = 18, text_color = arcade.color.WHITE).with_border(color=arcade.color.WHITE, width = 2)
         #create button to allow user to submit both username and password
         self.confirm = arcade.Text("Confirm", self.window.width / 2, self.window.height / 2 - 200, arcade.color.WHITE, 22, anchor_x="center")
-        
+         #error message shown under Confirm when sign-in fails (empty until needed)
+        self.error = arcade.Text("", self.window.width / 2, self.window.height / 2 - 250, arcade.color.RED, 16, anchor_x="center")
         #creates labels for each of the text fields
         layout = arcade.gui.UIBoxLayout(space_between = 20)
         layout.add(arcade.gui.UILabel(text = "Username", font_size = 18, text_color = arcade.color.WHITE))
@@ -99,7 +101,12 @@ class LoginScreen(arcade.View):
             #saves users username and password when they click confirm
             username = self.UserName_input.text.strip()
             password = self.Password_input.text
-            
+            #checks the database; same message for a wrong username or a wrong password
+            if verify_user(username, password):
+                self.window.show_view(SonicScape_MainScreen())
+            else:
+                self.error.text = "Sign-in failed. Check your username and password."
+                self.Password_input.text = ""
             # if (sql logic to confirm account login):
             #     self.window.show_view(SonicScape_MainScreen())
 
@@ -109,7 +116,8 @@ class LoginScreen(arcade.View):
         self.title.draw()
         self.back.draw()
         self.manager.draw()
-    
+        self.confirm.draw()
+        self.error.draw()
     
     
     
@@ -127,7 +135,8 @@ class NewAccountScreen(arcade.View):
         self.Password_input = arcade.gui.UIInputText(width = 300, height = 40, font_size = 18, text_color = arcade.color.WHITE).with_border(color=arcade.color.WHITE, width = 2)
         #create button to allow user to submit both username and password
         self.confirm = arcade.Text("Confirm", self.window.width / 2, self.window.height / 2 - 200, arcade.color.WHITE, 22, anchor_x="center")
-        
+         #error message shown under Confirm when sign-in fails (empty until needed)
+        self.error = arcade.Text("", self.window.width / 2, self.window.height / 2 - 250, arcade.color.RED, 16, anchor_x="center")
         #creates labels for each of the text fields
         layout = arcade.gui.UIBoxLayout(space_between = 20)
         layout.add(arcade.gui.UILabel(text = "Username", font_size = 18, text_color = arcade.color.WHITE))
@@ -160,9 +169,14 @@ class NewAccountScreen(arcade.View):
             username = self.UserName_input.text.strip()
             password = self.Password_input.text
             #clear the text fields once they submit and move them onto the preference screen
-            self.UserName_input.text = ""
-            self.Password_input.text = ""
-            self.window.show_view(PreferenceScreen())
+            #saves the account; only move on if it was actually created
+            if create_user(username, password):
+                #clear the text fields once they submit and move them onto the preference screen
+                self.UserName_input.text = ""
+                self.Password_input.text = ""
+                self.window.show_view(PreferenceScreen())
+            else:
+                self.error.text = "Username is taken or a field is empty."
     
     def on_draw(self):
         self.clear()
@@ -170,7 +184,7 @@ class NewAccountScreen(arcade.View):
         self.back.draw()
         self.manager.draw()
         self.confirm.draw()
-        
+         self.error.draw()
         
         
         
