@@ -167,6 +167,18 @@ Figure 1 shows how SonicScape stores user accounts, music preferences, and swipe
 
 *Figure 1 — Goal 3 ER diagram. [View editable Mermaid source](../docs/design/goal3-er-diagram.mmd).*
 
+#### Database Design Explanation — Issue #65
+
+SonicScape's Goal 3 database is designed to preserve user accounts, music preferences, and swipe history between sessions. The database separates shared music information from individual user information so that each user can have a personalized experience. The shared music catalogue contains genres, artists, and songs, while user-specific tables store account details, selected preferences, and swipe interactions. This structure allows multiple users to explore the same music catalogue while maintaining their own preferences and activity history.
+
+When a user creates an account, their information is associated with a unique user ID. Their selected genres and artists are linked to that account through preference tables. As users interact with SonicScape, their swipes can be recorded in the swipe history table, including which music item was selected, the direction of the swipe, and when it occurred. When users sign in again, SonicScape can retrieve their saved preferences and swipe history to restore their personalized experience. The database design also uses primary keys, foreign keys, and uniqueness constraints to help maintain organized and consistent data.
+
+#### Entity-Relationship Diagram Explanation — Issue #68
+
+The ER diagram in Figure 1 illustrates the seven entities used in SonicScape's proposed database structure: USER, GENRE, ARTIST, SONG, USER_GENRE_PREFERENCE, USER_ARTIST_PREFERENCE, and SWIPE_HISTORY. The USER table stores account information, including a unique user ID, username, password hash, and account creation date. The GENRE table stores music genres, while the ARTIST table connects artists to genres through a foreign key. The SONG table connects songs to their corresponding artists. These relationships organize the shared music catalogue and support SonicScape's music discovery features.
+
+The USER_GENRE_PREFERENCE and USER_ARTIST_PREFERENCE tables connect individual users to the genres and artists they select. Each preference record contains a unique identifier, references to the user and selected music item, and a timestamp. The SWIPE_HISTORY table records user interactions using a user ID, target type, target ID, swipe direction, and timestamp. A user can have multiple preferences and swipe records, but each of those records belongs to a specific user. Primary keys uniquely identify database records, while foreign keys establish relationships between tables. Together, these connections allow SonicScape to organize music information and retrieve each user's saved activity.
+
 ### Specification and design documents
 
 | Document | Kind | Covers | Issues |
