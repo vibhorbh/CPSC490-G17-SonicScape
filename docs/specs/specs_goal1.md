@@ -21,7 +21,7 @@ to ones the user has liked.
 
 ## Functional requirements
 
-Written in EARS form — "when 〈trigger〉, the system shall 〈response〉" — so each
+Written in EARS form — "when triggered, the system shall respond" — so each
 one becomes a test almost verbatim.
 
 | ID | Requirement | Story |
