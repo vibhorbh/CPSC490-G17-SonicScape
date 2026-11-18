@@ -131,8 +131,7 @@ sequenceDiagram
     App-->>User: Updated map highlights
 ```
 
-*Figure : Swipe sequence for Goal 2. It answers one question: what happens,
-in order, between a user's swipe and the map updating?*
+*Figure 3 : Goal 2 Swipe Sequence diagram. [View editable Mermaid source](../docs/design/goal2-design.md).*
 
 ### Architectural Diagram
 ```mermaid
@@ -143,8 +142,7 @@ graph TD
     Backend --> Database[(Database)]
 ```
 
-*Figure: High-level system architecture. It answers one question: what are
-the major pieces of the system and how do they connect?*
+*Figure 4 : — High-level Architecture diagram. [View editable Mermaid source](../docs/design/architecture.md).*
 
 ### System Context Diagram
 ```mermaid
@@ -158,14 +156,15 @@ graph LR
     SonicScape --> Last.fm
     SonicScape --> Database
 ```
+*Figure 5 — Goal 2 System Context diagram. [View editable Mermaid source](../docs/design/system_context.md).*
 
 ### Goal 3 Database Design
 
-Figure 1 shows how SonicScape stores user accounts, music preferences, and swipe history. The database separates individual user information from the shared music catalogue.
+Figure 6 shows how SonicScape stores user accounts, music preferences, and swipe history. The database separates individual user information from the shared music catalogue.
 
 ![Figure 1: Goal 3 entity-relationship diagram](../docs/design/goal3-er-diagram.png)
 
-*Figure 1 — Goal 3 ER diagram. [View editable Mermaid source](../docs/design/goal3-er-diagram.mmd).*
+*Figure 7 — Goal 3 ER diagram. [View editable Mermaid source](../docs/design/goal3-er-diagram.mmd).*
 
 #### Database Design Explanation — Issue #65
 
@@ -186,8 +185,8 @@ The USER_GENRE_PREFERENCE and USER_ARTIST_PREFERENCE tables connect individual u
 | [Goal 1 Specification](../docs/specs/specs_goal1.md) | specification | Goal 1 - Galaxy Navigation and Discovery Recommendations | #21, #25, #26, #47 |
 | [Goal 1 Screen Flow](../docs/design/screenflow.md) | design | Goal 1 - Galaxy Navigation and Discovery Recommendations | #21, #25, #26, #46 |
 | [Data Flow Diagram](../docs/design/dataflow.md) | Design | Goal 1 - Galaxy Navigation and Discovery Recommendations | #21, #25, #26, #53 |
-| [Goal 2 Swipe Sequence Diagram](docs/design/goal2-design.md) and [Architectural Design](docs/design/architecture.md) | design | Goal 2 - Swipe feedback | #22, #27, #28 |
-|[Goal 2 Specifications](docs/specs/specs_goal2.md)| Specs | Goal 2 :Swipe feedback | #22, #27, #28| 
+| [Goal 2 Swipe Sequence Diagram](../docs/design/goal2-design.md) and [Architectural Design](../docs/design/architecture.md) | design | Goal 2 - Swipe feedback | #22, #27, #28 |
+|[Goal 2 Specifications](../docs/specs/specs_goal2.md)| Specs | Goal 2 :Swipe feedback | #22, #27, #28| 
 | [Goal 3 Specification](../docs/specs/specs_goal3.md) | specification | Goal 3 — Persistent User Profile | #23, #29, #30, #42 |
 | [Goal 3 Database Design](../docs/design/goal3-database.md) | design | Goal 3 — Persistent User Profile | #23, #29, #30, #43 |
 
