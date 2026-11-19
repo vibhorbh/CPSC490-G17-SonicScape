@@ -203,7 +203,7 @@ Figure 1 shows how SonicScape stores user accounts, music preferences, and swipe
 | [#42](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/42) | task | Write Goal 3 specification | #29, #30 | hassanalrubai02 | Sprint 2 |
 | [#43](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/43) | task | Create Goal 3 database design and ER diagram | #29, #30 | hassanalrubai02 | Sprint 2 |
 | [#72](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/72) | task | Set up swipe functionality on the main screen | #27 | braddeboer | Sprint 3 |
-| [#74](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/74) | task | Write detailed explanations for tables and diagrams in proposal.md | #46, #43, #44 | bradeboer | Sprint 3 |
+| [#74](https://github.com/vibhorbh/CPSC490-G17-SonicScape/issues/74) | task | Write detailed explanations for tables and diagrams in proposal.md | #46, #43, #44 | braddeboer | Sprint 3 |
 
 ## 5. Project Outcomes
 
