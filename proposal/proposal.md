@@ -111,7 +111,7 @@ sequenceDiagram
     App-->>User: Updated map highlights
 ```
 
-*Figure : Swipe sequence for Goal 2. It answers one question: what happens,
+*Figure 3: Swipe sequence for Goal 2. It answers one question: what happens,
 in order, between a user's swipe and the map updating?*
 
 This Sequence Diagram shows what will occur, in order, from the moment a user swipes on an item to the moment our application responds. It has four participants, drawn left to right as vertical lifelines, with time running from top to bottom. The User is the person using SonicScape and is drawn as a stick figure. The App is the part of the program the user sees and touches, which in the prototype is the Arcade interface. The FeedbackSystem is the logic that records a swipe as a like or a dislike. The RecommendationEngine is the logic that talks to last.fm and will generate new similar Artists, Genres, and Songs for the user based off of their likes and prefernces. The participants appear again at the bottom of the diagram, which is how the diagramming tool closes each lifeline and does not represent a second set of components.
@@ -129,7 +129,7 @@ graph TD
     Backend --> Database[(Database)]
 ```
 
-*Figure: High-level system architecture. It answers one question: what are
+*Figure 4: High-level system architecture. It answers one question: what are
 the major pieces of the system and how do they connect?*
 
 This Architectural Diagram answers one question: what are the major pieces of Project SonicScape, and how are they connected? It has five boxes. The User is the person who runs the application and is the only element outside the system. The Frontend is the interface layer, which draws the screens, shows the star systems and planets, and detects clicks, drags, and swipes. The Backend sits between the interface and everything else. It receives what the user did, applies the application’s rules, and decides which other component to ask. Below the Backend are two components it uses directly. The Recommendation Engine, drawn as a rectangle, contains the similarity-based ranking that decides which star system comes next. The Database, drawn as a cylinder, which is the standard symbol for stored data, holds the persistent information described in Goal 3: user accounts, starting picks, and swipe history.
@@ -148,6 +148,8 @@ graph LR
     SonicScape --> Last.fm
     SonicScape --> Database
 ```
+*Figure 5 — Goal 2 System Context diagram. [View editable Mermaid source](../docs/design/system_context.md).*
+
 The system context diagram shows SonicScape as a single box and places it among the people and outside services it interacts with. Unlike the architectural diagram, we deliberately hide the internal components and ask only what is inside the system and what is outside it. The diagram has four elements. The User is the person who runs SonicScape, and is the only human actor. The SonicScape System is the application as a whole, covering the interface, the backend logic, and the recommendation ranking that the architecture diagram breaks apart. The Last.fm API is an external web service that supplies music data, specifically artists, tags, and artist-to-artist similarity. The Database, drawn as a cylinder, is the stored data for the application, which holds user accounts, starting picks, and swipe history (Goal 3).
 
 The arrows show who initiates each interaction. The arrow from the User to the SonicScape System means the user acts on the system by signing in, choosing starting genres and artists, clicking through star systems and planets, and swiping to like or dislike. The arrow from the SonicScape System to the Last.fm API means the system sends requests out to Last.fm to retrieve similarity and artist data, and Last.fm’s responses come back along the same path. This is the dependency the similarity-based ranking in Goal 1 relies on, since SonicScape does not hold its own similarity data. The arrow from the SonicScape System to the Database means the system writes and reads persistent information, saving a swipe or account as it happens and restoring a user’s profile and history at sign-in (Objectives 3.1 and 3.2).
