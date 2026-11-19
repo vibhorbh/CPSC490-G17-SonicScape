@@ -114,6 +114,12 @@ sequenceDiagram
 *Figure : Swipe sequence for Goal 2. It answers one question: what happens,
 in order, between a user's swipe and the map updating?*
 
+This Sequence Diagram shows what will occur, in order, from the moment a user swipes on an item to the moment our application responds. It has four participants, drawn left to right as vertical lifelines, with time running from top to bottom. The User is the person using SonicScape and is drawn as a stick figure. The App is the part of the program the user sees and touches, which in the prototype is the Arcade interface. The FeedbackSystem is the logic that records a swipe as a like or a dislike. The RecommendationEngine is the logic that talks to last.fm and will generate new similar Artists, Genres, and Songs for the user based off of their likes and prefernces. The participants appear again at the bottom of the diagram, which is how the diagramming tool closes each lifeline and does not represent a second set of components.
+
+The sequence begins when the User swipes on a genre, artist, or song, which is the first arrow, drawn as a solid line from the User to the App. This corresponds to Objective 2.1, which allows a swipe on any of the three kinds of item. The App then sends the swipe, together with its value (like or dislike), to the FeedbackSystem. From that point the diagram branches, shown by the dotted box labeled “alt”, which is the diagramming notation for alternatives of which exactly one happens. If the user swiped right, the FeedbackSystem records a like and tells the RecommendationEngine to move similar items up in the ranking. If the user swiped left, the FeedbackSystem records a dislike and tells the RecommendationEngine to move the item and its close neighbors down. These two branches correspond to the two halves of Objective 2.2, in which items similar to liked ones are prioritized and disliked items are deprioritized.
+
+The remaining four arrows are dashed, which in a sequence diagram means a response or return message. First the FeedbackSystem returns “Swipe recorded” to the App, which confirms that the like or dislike was captured. The App then gives the User a “Visual confirmation”, so the person can see that the swipe registered. Separately, the RecommendationEngine returns the “Updated ranking” to the App, which carries the result of the re-ranking. Finally, the App shows the User the result of that new ranking. Together, the first two returns confirm that the feedback was received, and the last two show that the feedback changed what the user will see next, which is the claim behind problem statement P2, that the experience should respond to the user.
+
 ### Architectural Diagram
 ```mermaid
 graph TD
@@ -125,6 +131,10 @@ graph TD
 
 *Figure: High-level system architecture. It answers one question: what are
 the major pieces of the system and how do they connect?*
+
+This Architectural Diagram answers one question: what are the major pieces of Project SonicScape, and how are they connected? It has five boxes. The User is the person who runs the application and is the only element outside the system. The Frontend is the interface layer, which draws the screens, shows the star systems and planets, and detects clicks, drags, and swipes. The Backend sits between the interface and everything else. It receives what the user did, applies the application’s rules, and decides which other component to ask. Below the Backend are two components it uses directly. The Recommendation Engine, drawn as a rectangle, contains the similarity-based ranking that decides which star system comes next. The Database, drawn as a cylinder, which is the standard symbol for stored data, holds the persistent information described in Goal 3: user accounts, starting picks, and swipe history.
+
+The arrows show the direction in which one component calls another. The User interacts with the Frontend, the Frontend passes requests to the Backend, and the Backend calls both the Recommendation Engine and the Database. The Frontend never talks to the Database or the Recommendation Engine directly, so all rules and storage go through one layer. The Recommendation Engine and the Database also do not talk to each other, which means the Backend is the only component that moves data between them. This separation is what lets the team work on the interface, the ranking, and the storage independently, and it matches the folder structure of the prototype, which has separate frontend, backend, recommender, and database folders.
 
 ### System Context Diagram
 ```mermaid
@@ -138,6 +148,11 @@ graph LR
     SonicScape --> Last.fm
     SonicScape --> Database
 ```
+The system context diagram shows SonicScape as a single box and places it among the people and outside services it interacts with. Unlike the architectural diagram, we deliberately hide the internal components and ask only what is inside the system and what is outside it. The diagram has four elements. The User is the person who runs SonicScape, and is the only human actor. The SonicScape System is the application as a whole, covering the interface, the backend logic, and the recommendation ranking that the architecture diagram breaks apart. The Last.fm API is an external web service that supplies music data, specifically artists, tags, and artist-to-artist similarity. The Database, drawn as a cylinder, is the stored data for the application, which holds user accounts, starting picks, and swipe history (Goal 3).
+
+The arrows show who initiates each interaction. The arrow from the User to the SonicScape System means the user acts on the system by signing in, choosing starting genres and artists, clicking through star systems and planets, and swiping to like or dislike. The arrow from the SonicScape System to the Last.fm API means the system sends requests out to Last.fm to retrieve similarity and artist data, and Last.fm’s responses come back along the same path. This is the dependency the similarity-based ranking in Goal 1 relies on, since SonicScape does not hold its own similarity data. The arrow from the SonicScape System to the Database means the system writes and reads persistent information, saving a swipe or account as it happens and restoring a user’s profile and history at sign-in (Objectives 3.1 and 3.2).
+
+Reading the diagram as a whole, SonicScape has one kind of user and two things it depends on: a remote data service it does not control, and a local store that holds the user’s own data. The diagram also shows what the system does not do. There is no arrow to an audio service, because the application does not play music itself and will instead link-out, meaning everything the user hears happens outside of the application.
 
 ### Goal 3 Database Design
 
