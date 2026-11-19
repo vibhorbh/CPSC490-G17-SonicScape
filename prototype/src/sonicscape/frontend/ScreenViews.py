@@ -3,6 +3,9 @@ import arcade.gui
 from src.sonicscape.frontend.helpers import is_over
 from src.sonicscape.database.db import create_user, verify_user
 
+#Distance an element must be moved for it to count as a swipe
+swipe_distance = 20
+
 class SignInScreen(arcade.View):
     #Arcade View code for the Sign in screen for SonicScape      
     def __init__(self):
@@ -67,7 +70,7 @@ class LoginScreen(arcade.View):
         self.Password_input = arcade.gui.UIInputText(width = 300, height = 40, font_size = 18, text_color = arcade.color.WHITE).with_border(color=arcade.color.WHITE, width = 2)
         #create button to allow user to submit both username and password
         self.confirm = arcade.Text("Confirm", self.window.width / 2, self.window.height / 2 - 200, arcade.color.WHITE, 22, anchor_x="center")
-         #error message shown under Confirm when sign-in fails (empty until needed)
+        #error message shown under Confirm when sign-in fails (empty until needed)
         self.error = arcade.Text("", self.window.width / 2, self.window.height / 2 - 250, arcade.color.RED, 16, anchor_x="center")
         #creates labels for each of the text fields
         layout = arcade.gui.UIBoxLayout(space_between = 20)
@@ -184,7 +187,7 @@ class NewAccountScreen(arcade.View):
         self.back.draw()
         self.manager.draw()
         self.confirm.draw()
-         self.error.draw()
+        self.error.draw()
         
         
         
@@ -234,8 +237,65 @@ class SonicScape_MainScreen(arcade.View):
     def __init__(self, window = None, background_color = None):
         super().__init__(window, background_color)
         
+        #save reference point for the start position of ui element that will be swiped
+        self.home_x = self.window.width / 2
+        
+        #swipe functionality test text
+        self.card = arcade.Text("Swipe Functionality", self.home_x, self.window.height / 2, arcade.color.WHITE, 40, anchor_x = "center", anchor_y = "center")
+        #tell user how to perform a swipe
+        self.status = arcade.Text("Click and drag LEFT to Dislike, Click and drag RIGHT to Like", self.window.width / 2, self.window.height / 2 - 80, arcade.color.YELLOW_ORANGE, 20, anchor_x="center", anchor_y="center")
+        #boolean for wether or not a user is currently swiping
+        self.dragging = False
+        
     def on_show_view(self):
-        return super().on_show_view()
+        self.window.background_color = arcade.color.BLACK
+    
+    def on_mouse_press(self, x, y, button, modifiers):
+        if is_over(self.card, x, y, pad = 10):
+            self.dragging = True
+    
+    def on_mouse_drag(self, x, y, dx, dy, _buttons, _modifiers):
+        if not self.dragging:
+            return
+        #holds horizontal movement
+        self.card.x += dx
+        #difference between distance moved and home location
+        offset = self.card.x - self.home_x
+        #sets the color of the text to green or red to indicate a like or dislike
+        if offset > swipe_distance:
+            self.card.color = arcade.color.GREEN
+        elif offset < -swipe_distance:
+            self.card.color = arcade.color.RED
+        else:
+            self.card.color = arcade.color.WHITE
+        
+    def on_mouse_release(self, x, y, button, modifiers):
+        if not self.dragging:
+            return
+        #reset dragging boolean
+        self.dragging = False
+        offset = self.card.x - self.home_x
+        if offset > swipe_distance:
+            self.like()
+        elif offset < swipe_distance:
+            self.dislike()
+    
+    #these two functions will store the like or dislike in our back end to talk to last.fm and request similar artists songs or genres
+    def like(self):
+        self.status.text = "Liked"
+        #brings the text back to starting location and resets color
+        self.card.x = self.home_x
+        self.status.color = arcade.color.GREEN
+        self.card.color = arcade.color.WHITE
+    
+    def dislike(self):
+        self.status.text = "Disliked"
+        #brings the text back to starting location and resets color
+        self.card.x = self.window.width / 2
+        self.status.color = arcade.color.RED
+        self.card.color = arcade.color.WHITE
     
     def on_draw(self):
         self.clear()
+        self.card.draw()
+        self.status.draw()
