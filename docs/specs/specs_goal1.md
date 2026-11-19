@@ -21,7 +21,7 @@ to ones the user has liked.
 
 ## Functional requirements
 
-Written in EARS form — "when 〈trigger〉, the system shall 〈response〉" — so each
+Written in EARS form — "when triggered, the system shall respond" — so each
 one becomes a test almost verbatim.
 
 | ID | Requirement | Story |
@@ -55,16 +55,14 @@ one becomes a test almost verbatim.
       song without help.
 - [ ] In testing, users swipe right on highlighted artists more often than on
       randomly chosen ones.
-- [ ] `python .github/scripts/check_repo.py` is green and the prototype's
-      tests pass.
 
 ## Open questions
 
 | Question | Owner | Needed by |
 |---|---|---|
-| Which external listening service does selecting a planet open, and does every track in the dataset have a link to it? | 〈name〉 | before FR-5 is implemented |
-| Where does the stored music dataset come from, how large is it (genres, artists, songs), and what source supplies artist similarity? | 〈name〉 | Sprint 〈n〉 planning |
-| What counts as "visited": opening a star system, or opening one of its songs? | 〈name〉 | before FR-7 is implemented |
-| How many star systems are highlighted at once? | 〈name〉 | before FR-7 is implemented |
-| Which astronomical data source supplies star and planet names, and is it fetched once or at runtime? | 〈name〉 | before FR-1 is implemented |
-| If the in-app playback stretch goal is pursued, which preview source is used, and are its terms acceptable? | 〈name〉 | only if the stretch goal starts |
+| Which external listening service does selecting a planet open, and does every track in the dataset have a link to it? | vibhorbh | before FR-5 is implemented |
+| Where does the stored music dataset come from, how large is it (genres, artists, songs), and what source supplies artist similarity? | vibhorbh | Sprint 2 planning |
+| What counts as "visited": opening a star system, or opening one of its songs? | vibhorbh | before FR-7 is implemented |
+| How many star systems are highlighted at once? | vibhorbh | before FR-7 is implemented |
+| Which astronomical data source supplies star and planet names, and is it fetched once or at runtime? | vibhorbh | before FR-1 is implemented |
+| If the in-app playback stretch goal is pursued, which preview source is used, and are its terms acceptable? | vibhorbh | only if the stretch goal starts |

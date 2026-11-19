@@ -77,6 +77,26 @@ Goal 3: Personalized Map with a Persistent User Profile
 | Dev tools | pytest, GitHub Actions, Mermaid | Tests for ranking and storage logic; diagrams kept as editable source. |
 | Optional | LLM service (stretch goal, undecided) | Proposes extra candidates validated against the dataset (Goal 1). |
 
+**Python**
+- Our team chose Python 3.10+ as our primary language because every part of SonicScape (the interface, the Last.fm requests, and the database logic) can be written in this single language. We briefly considered C++, which offers better performance and finer control over graphics, but it would take longer to set up and write, and we wanted a simpler, more flexible language that every member can work in within. Python’s versatility lets us cover several kinds of work with one tool-chain. We need to create graphics and handle input, which Python’s Arcade library allows. The data side needs web requests and JSON parsing to talk to APIs like Last.fm and NASA, which the requests library handles in a few lines of code. Our persistent storage needs a database, and SQLite comes built into Python’s standard library, so nothing extra has to be installed. Using one language also means any member can review any part of the code, which matters for a team of four.
+**Arcade**
+- For the interface, we chose Arcade, a Python library built for 2D graphics, because SonicScape shows one star system at a time with clickable planets and swipe input (Goals 1 and 2). Arcade handles drawing, text, and mouse input with minimal code. We considered Pygame, which has a larger community, and a web front end, which could look more polished. We chose Arcade because its interface is cleaner, it includes built-in widgets for buttons and forms that the sign-in and genre-selection screens need, and it keeps the entire application in Python. We limited the interface to 2D because one star system at a time does not require a 3D scene, and a 2D view is faster for us to build.
+**SQLite**
+- We selected SQLite to store each user’s profile, starting selections, and swipe history in a single local file (Goal 3). We considered locally stored CSV or JSON files and a hosted database, but each had limits. CSV and JSON files cannot be queried or related to each other without extra code, and a hosted database would add server setup and ongoing hosting costs for what is a single-user application. SQLite comes built into Python, needs no special installation, and still gives us the relational tables described in our ER diagram.
+**Last.fm**
+- To access music data we researched several options and found Last.fm to be the simplest and most accessible. Its API includes a built-in method for finding similar artists, which lets us skip building our own similarity data. Similarity data is what our ranking uses to decide which star system is shown next, so Last.fm directly supports Goal 1. Last.fm also offers free API keys to developers. It does not provide audio, which is why song playback is handled separately.
+**NASA**
+- For astronomical data, we chose NASA’s open APIs to supply real star and planet names for our visual theme, which gives each artist’s system a distinct, real-sounding identity. This data is cosmetic and does not affect recommendations, so the discovery logic does not depend on it. If the NASA data proves unreliable, a fixed list of names stored in the project could replace it.
+**Song Playback**
+- The team decided to add song playback into our program so that discovering new music and adding it to your own library becomes that much easier. The plan is to provide links to external streaming services such as Spotify, Apple Music, or Youtube Music. We chose this avenue as unfortunately Last.fm provides just about everything besides audio playback, and in-app playback would require our team to depend on third-party terms which is out of our control. Link-out works for any track in our data and needs no audio licensing while keeping our focus on discovery rather than becoming a streaming service.
+**API Keys**
+- We store API keys in a local .env file that is excluded from the repository, and we commit only a .env.example template. Any key committed to the repository would be public information, so this keeps individual keys secure.
+**Development Tools**
+- For development tools, we use pytest for automated tests, GitHub Actions to run the repository’s checks on every pull request, and Mermaid to keep our diagrams as editable text in the repository. We chose these because they are free, they integrate with GitHub, and they keep our work reviewable and consistent across the team.
+**LLM Service**
+- A possible stretch goal for the team is to potentially add LLM integration to help suggest extra candidate artists, but every candidate must exist in the Last.fm data and pass the same novelty and similarity ranking as any other, so it widens the pool without choosing what the user sees. We have not selected a service, and nothing in the committed design depends on one, which means the project is complete without it. Incorporating an LLM would be nice to give us exposure to this very fast growing sector of programming however we currently have access to tools which removes the absolute need for one to be added.
+
+
 ### Data Flow Diagram
 ![Figure 1: Data Flow Diagram](../docs/design/dataflow.drawio.png) 
 *Figure 1 — Data Flow diagram. [View editable Mermaid source](../docs/design/dataflow.md).*
@@ -158,11 +178,23 @@ Reading the diagram as a whole, SonicScape has one kind of user and two things i
 
 ### Goal 3 Database Design
 
-Figure 1 shows how SonicScape stores user accounts, music preferences, and swipe history. The database separates individual user information from the shared music catalogue.
+Figure 6 shows how SonicScape stores user accounts, music preferences, and swipe history. The database separates individual user information from the shared music catalogue.
 
 ![Figure 1: Goal 3 entity-relationship diagram](../docs/design/goal3-er-diagram.png)
 
-*Figure 1 — Goal 3 ER diagram. [View editable Mermaid source](../docs/design/goal3-er-diagram.mmd).*
+*Figure 7 — Goal 3 ER diagram. [View editable Mermaid source](../docs/design/goal3-er-diagram.mmd).*
+
+#### Database Design Explanation — Issue #65
+
+SonicScape's Goal 3 database is designed to preserve user accounts, music preferences, and swipe history between sessions. The database separates shared music information from individual user information so that each user can have a personalized experience. The shared music catalogue contains genres, artists, and songs, while user-specific tables store account details, selected preferences, and swipe interactions. This structure allows multiple users to explore the same music catalogue while maintaining their own preferences and activity history.
+
+When a user creates an account, their information is associated with a unique user ID. Their selected genres and artists are linked to that account through preference tables. As users interact with SonicScape, their swipes can be recorded in the swipe history table, including which music item was selected, the direction of the swipe, and when it occurred. When users sign in again, SonicScape can retrieve their saved preferences and swipe history to restore their personalized experience. The database design also uses primary keys, foreign keys, and uniqueness constraints to help maintain organized and consistent data.
+
+#### Entity-Relationship Diagram Explanation — Issue #68
+
+The ER diagram in Figure 1 illustrates the seven entities used in SonicScape's proposed database structure: USER, GENRE, ARTIST, SONG, USER_GENRE_PREFERENCE, USER_ARTIST_PREFERENCE, and SWIPE_HISTORY. The USER table stores account information, including a unique user ID, username, password hash, and account creation date. The GENRE table stores music genres, while the ARTIST table connects artists to genres through a foreign key. The SONG table connects songs to their corresponding artists. These relationships organize the shared music catalogue and support SonicScape's music discovery features.
+
+The USER_GENRE_PREFERENCE and USER_ARTIST_PREFERENCE tables connect individual users to the genres and artists they select. Each preference record contains a unique identifier, references to the user and selected music item, and a timestamp. The SWIPE_HISTORY table records user interactions using a user ID, target type, target ID, swipe direction, and timestamp. A user can have multiple preferences and swipe records, but each of those records belongs to a specific user. Primary keys uniquely identify database records, while foreign keys establish relationships between tables. Together, these connections allow SonicScape to organize music information and retrieve each user's saved activity.
 
 ### Specification and design documents
 
@@ -171,8 +203,8 @@ Figure 1 shows how SonicScape stores user accounts, music preferences, and swipe
 | [Goal 1 Specification](../docs/specs/specs_goal1.md) | specification | Goal 1 - Galaxy Navigation and Discovery Recommendations | #21, #25, #26, #47 |
 | [Goal 1 Screen Flow](../docs/design/screenflow.md) | design | Goal 1 - Galaxy Navigation and Discovery Recommendations | #21, #25, #26, #46 |
 | [Data Flow Diagram](../docs/design/dataflow.md) | Design | Goal 1 - Galaxy Navigation and Discovery Recommendations | #21, #25, #26, #53 |
-| [Goal 2 Swipe Sequence Diagram](docs/design/goal2-design.md) and [Architectural Design](docs/design/architecture.md) | design | Goal 2 - Swipe feedback | #22, #27, #28 |
-|[Goal 2 Specifications](docs/specs/specs_goal2.md)| Specs | Goal 2 :Swipe feedback | #22, #27, #28| 
+| [Goal 2 Swipe Sequence Diagram](../docs/design/goal2-design.md) and [Architectural Design](../docs/design/architecture.md) | design | Goal 2 - Swipe feedback | #22, #27, #28 |
+|[Goal 2 Specifications](../docs/specs/specs_goal2.md)| Specs | Goal 2 :Swipe feedback | #22, #27, #28| 
 | [Goal 3 Specification](../docs/specs/specs_goal3.md) | specification | Goal 3 — Persistent User Profile | #23, #29, #30, #42 |
 | [Goal 3 Database Design](../docs/design/goal3-database.md) | design | Goal 3 — Persistent User Profile | #23, #29, #30, #43 |
 
