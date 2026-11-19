@@ -7,7 +7,7 @@ this folder.
 ## How to run
 
 ```bash
-cd cd CPSC490-G17-SonicScape\prototype
+cd CPSC490-G17-SonicScape\prototype
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
